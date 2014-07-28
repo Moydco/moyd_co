@@ -43,19 +43,13 @@ gem 'capistrano-ext', group: :development
 # Storage on MongoDB
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 
-# Integration with AngularJS for frontend
-gem 'angularjs-rails'
-
 # Twitter Bootstrap SASS and all the needs for Sallow landing page
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
 gem 'jquery-easing-rails'
-
-# Dashboard Graphs
-gem 'morrisjs-rails'
-gem 'raphael-rails'
+gem 'nicescroll-rails'
 
 # Easy translations
 gem 'localeapp'

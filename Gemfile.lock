@@ -38,7 +38,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    angularjs-rails (1.2.20)
     arel (5.0.1.20140414130214)
     auto_html (1.6.4)
       redcarpet (~> 3.1)
@@ -132,14 +131,14 @@ GEM
       bson (~> 2.2)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
-    morrisjs-rails (0.5.0)
-      railties (> 3.1, < 5)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     netrc (0.7.7)
+    nicescroll-rails (3.5.4.1)
+      railties (>= 3.1)
     optionable (0.2.0)
     origin (2.1.1)
     orm_adapter (0.5.0)
@@ -168,7 +167,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.3.2)
-    raphael-rails (2.1.2)
     rdoc (4.1.1)
       json (~> 1.4)
     redcarpet (3.1.2)
@@ -224,7 +222,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angularjs-rails
   auto_html
   autoprefixer-rails
   bootstrap-sass
@@ -245,11 +242,10 @@ DEPENDENCIES
   localeapp
   mandrill_mailer
   mongoid (~> 4)!
-  morrisjs-rails
+  nicescroll-rails
   owlcarousel-rails
   rails (= 4.1.4)
   rails_config
-  raphael-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

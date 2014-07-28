@@ -1,0 +1,511 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#home-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#intro" class="navbar-brand"><%= image_tag 'logo.png', alt: 'Moyd.co' %></a>
+    </div>
+
+
+    <div class="navbar-collapse collapse pull-right" id="home-navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#services-top">The Problem</a></li>
+        <li><a href="#works-top">The Solution</a></li>
+        <li><a href="#offer-top">The Offer</a></li>
+        <li><a href="#gallery-top">The Blog</a></li>
+        <li><a href="#team-top">The Team</a></li>
+        <li><a href="#contact-top">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Intro -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2 margin25">
+        <div id="carousel_fade_intro" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+          <div class="carousel-inner">
+            <div class="active item">
+              <h1>Introducing MOYD DNS</h1>
+            </div>
+            <div class="item">
+              <h2>Be the Master Of Your Domain...</h2>
+            </div>
+            <div class="item">
+              <h2>We're Route53 for your Hybrid Cloud</h2>
+            </div>
+            <div class="item">
+              <h2>Perfect for Openstack & OpenNebula</h2>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--start services header-->
+<section id="services-top">
+  <!--start services-desktop header-->
+  <section id="services-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">The Problem</h1>
+    <p class="header">Do I have a DNS problem?</p>
+  </section>
+  <!--start services-mobile header-->
+  <section id="services-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">The Problem</h1>
+    <p class="header">Do I have a DNS problem?</p>
+  </section>
+</section>
+
+<!--start services-->
+<section id="services">
+  <div class="container-fluid">
+    <div class="row"> <!-- divide -->
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'money' %>
+          <h4>Reducing Costs</h4>
+          <span>How can I avoid unnecessary costs?</span>
+          <p>
+
+            Eliminate emergency security patching<br>
+            Forget about scheduling of updates<br>
+            Consolidate all your DNS servers<br>
+            Reduce customer support calls</p>
+
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'lemon-o' %>
+          <h4>Reducing Risks</h4>
+          <span>How can I avoid unnecessary Risks?</span>
+          <p>
+            Prevent security breaches from malicious code<br>
+            Eliminate risk of platform compromise<br>
+            Availability during denial of service attacks<br>
+            Distribute load on multiple datacenter</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'check-square-o' %>
+          <h4>Reduce Bottlenecks</h4>
+          <span>How can I avoid unnecessary hurdles?</span>
+          <p>
+            Increase DNS performance and capacity<br>
+            Stay online even while under attack<br>
+            Avoid downtime due to DNS server restarts<br>
+            Integrate in your existing cloud<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="fadeInUp delay animated hidden-phone" id="more">
+    <a href="#works-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
+  </div>
+  -->
+</section>
+
+<!--start works header-->
+<section id="works-top">
+  <!--start works-desktop header-->
+  <section id="works-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">The Solution</h1>
+    <p class="header">We're Route53 for your Open Cloud Software</p>
+  </section>
+  <!--start works-mobile header-->
+  <section id="works-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">The Solution</h1>
+    <p class="header">We're Route53 for your Open Cloud Software</p>
+  </section>
+</section>
+<!--start works-->
+<section id="services">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'sitemap' %>
+          <h4>A complete product</h4>
+          <span>What is moyd?</span>
+          <p>
+
+            A DNS server written for speed and security<br>
+            A check system wich dinamically update DNS<br>
+            APIs for integrating it with your apps<br>
+            An auth plugin for OpenStack & OpenNebula </p>
+
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'building' %>
+          <h4>Distibute everything</h4>
+          <span>How can I sleep well?</span>
+          <p>
+            Multidatacenter by default<br>
+            Shared nothing architecture (SN)<br>
+            Multidatacenter routing via Anycast BGP<br>
+            Resilient to multiple datacenter failures</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= fa_icon 'angle-double-up' %>
+          <h4>Scale to incredible load</h4>
+          <span>How can I always perform well?</span>
+          <p>
+            DNS servers works in RAM to increase speed<br>
+            Scale to hundreds of servers via Anycast OSPF<br>
+            Distribute load on multiple endpoints<br>
+            Native GeoDNS via Anycast resolution<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="fadeInUp delay animated hidden-phone" id="more">
+    <a href="#gallery-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
+  </div>
+  -->
+</section>
+
+<!--start offer header-->
+<section id="offer-top">
+  <!--start gallery-desktop header-->
+  <section id="offer-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">The offer</h1>
+    <p class="header">Our complete offer...</p>
+  </section>
+  <!--start gallery-mobile header-->
+  <section id="offer-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">The offer</h1>
+    <p class="header">Our complete offer...</p>
+  </section>
+</section>
+<!--start gallery-->
+<!--start thumbnails section-->
+<section id="offer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 thumbnail">
+        <h4>Community Edition</h4>
+        <span>Free installable appliance</span>
+        <p>Free DNS appliance integrable with OpenNebula Sunstone. <br/>
+          Automatic creation and configuration of FQDN and reverse DNS resolution from VM contextualization.<br/>
+          <strong>Coming Soon</strong></p>
+      </div>
+      <div class="col-md-3 thumbnail">
+        <h4>User edition</h4>
+        <span>SaaS for final user</span>
+        <p>Complete solution for final customer:<br/>
+          - instantiate as many DNS domains and record as you like<br/>
+          - multidatacenter AnyCast infrastructure<br/>
+          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
+          - High Availability, Load Balancing and GeoDNS routing policies<br/>
+          - Internal alias for maximum speed without chaining multiple CNAME<br/>
+          - PING and HTTP check<br/>
+          - Web and API Interface<br />
+          - pay only as you use: number of zones, number of checks, queries resolved<br/>
+          <strong>Coming Soon</strong></p>
+      </div>
+      <div class="col-md-3 thumbnail">
+        <h4>On-Cloud Edition</h4>
+        <span>SaaS for Cloud provider</span>
+        <p>Complete reseller solution:<br/>
+          - instantiate as many DNS domains and record as you like<br/>
+          - multidatacenter AnyCast infrastructure<br/>
+          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
+          - High Availability, Load Balancing and GeoDNS routing policies<br/>
+          - Internal alias for maximum speed without chaining multiple CNAME<br/>
+          - PING and HTTP check<br/>
+          - Web and API Interface<br />
+          - pay only as you use: number of zones, number of checks, queries resolved<br/>
+          - discount for big quantity<br/>
+          - reseller administration panel<br/>
+          <strong>Coming Soon</strong></p>
+      </div>
+      <div class="col-md-3 thumbnail">
+        <h4>On-Premise Edition</h4>
+        <span>Installable in big infrastructure.</span>
+        <p>Installable solution for CDN and Cloud owner:<br/>
+          - instantiate as many DNS domains and record as you like<br/>
+          - multidatacenter AnyCast infrastructure<br/>
+          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
+          - High Availability, Load Balancing and GeoDNS routing policies<br/>
+          - Internal alias for maximum speed without chaining multiple CNAME<br/>
+          - PING and HTTP check<br/>
+          - API Only Interface<br />
+          - license valid for life, no limit on installations<br/>
+          - possibility to externalize installation and maintenance<br/>
+          - priority assistance by phone<br/>
+          <strong>Contact us for a demo</strong></p>
+      </div>
+
+    </div>
+  </div>
+  <!--
+  <div class="fadeInUp delay animated hidden-phone" id="more">
+    <a href="#team-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
+  </div>
+  -->
+</section>
+
+<!--start blog header-->
+<section id="gallery-top">
+  <!--start gallery-desktop header-->
+  <section id="gallery-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">The blog</h1>
+    <p class="header">Last article from our blog...</p>
+  </section>
+  <!--start gallery-mobile header-->
+  <section id="gallery-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">The blog</h1>
+    <p class="header">Last article from our blog...</p>
+  </section>
+</section>
+<!--start gallery-->
+<!--start thumbnails section-->
+<section id="gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/blog">Read all articles from our blog</a>
+      </div>
+
+    </div>
+  </div>
+  <!--
+  <div class="fadeInUp delay animated hidden-phone" id="more">
+    <a href="#team-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
+  </div>
+  -->
+</section>
+
+<section id="team-top">
+  <!--start team-desktop header-->
+  <section id="team-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">The Team</h1>
+    <p class="header">Coffees and Apple</p>
+  </section>
+  <!--start team-mobile header-->
+  <section id="team-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">The Team</h1>
+    <p class="header">Coffees and Apple</p>
+  </section>
+</section>
+<!--start team-->
+<section id="team">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="span8 offset2">
+        <h1>We are MOYD</h1>
+        <p class="center">We are a small team of passionate developers highly focused on creating the best DNS in the World. </p>
+      </div>
+      <div class="span12">
+        <div class="thumbnails">
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <%= image_tag 'team_1.jpg', alt: 'Alberto Zuin' %>
+              <h4>Alberto Zuin</h4>
+              <span>Co-Founder & CEO</span>
+              <p>16 years of experience in the development of technological infrastructure.<br/>
+                <a href="mailto:a.zuin@moyd.co">a.zuin-at-moyd-dot-co</a></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <%= image_tag 'team_2.jpg', alt: 'Henry Tall' %>
+              <h4>Henry Tall</h4>
+              <span>Co-Founder & Marketing Manager</span>
+              <p>19 years of experience as an IT entrepreneur. Bachelor's degree in Marketing. <br/>
+                <a href="mailto:e.tall@moyd.co">e.tall-at-moyd-dot-co</a></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <%= image_tag 'team_3.jpg', alt: 'Manuel Zulian' %>
+              <h4>Manuel Zulian</h4>
+              <span>Frontend and Core Lead Developer</span>
+              <p>5 years of experience in the Java-Scala-JS development.  <br/><br/>
+                <a href="mailto:m.zulian@moyd.co">m.zulian-at-moyd-dot-co</a></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <%= image_tag 'team_4.jpg', alt: 'Scott Smith' %>
+              <h4>Scott Smith</h4>
+              <span>API Lead Developer</span>
+              <p>6 years of experience in the Ruby on Rails development.  <br/><br/>
+                <a href="mailto:s.smith@moyd.co">s.smith-at-moyd-dot-co</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="fadeInUp delay animated hidden-phone" id="more">
+      <a href="#contact-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
+    </div>
+    -->
+  </div>
+</section>
+<!--start contact header-->
+<section id="contact-top">
+  <!--start contact-desktop header-->
+  <section id="contact-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+    <h1 class="header">Contact us for a Demo</h1>
+    <p class="header">Or.. Fill up our inbox, we like that</p>
+  </section>
+  <!--start contact-mobile header-->
+  <section id="contact-top-mobile" class="hidden-md hidden-lg">
+    <h1 class="header">Contact for a Demo</h1>
+    <p class="header">Fill up our inbox, we like that</p>
+  </section>
+</section>
+<!--start contact-->
+<section id="contact">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <%= form_for @user, url: statics_path, method: :post, role: :form do |f| %>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>First Name:</label>
+                <%= f.text_field :first_name, class: 'form-control input-lg', placeholder: 'Your first name' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Last Name:</label>
+                <%= f.text_field :last_name, class: 'form-control input-lg', placeholder: 'Your last name' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Email:</label>
+                <%= f.email_field :email, class: 'form-control input-lg', placeholder: 'Your email address' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Subscribe me to mailing list</label>
+                <%= f.check_box :opt_in, class: 'form-control input-lg' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>Message:</label>
+                <%= f.text_area :message, class: 'form-control input-lg', rows: 12, cols: 80 %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="message"><div class="alert"></div></div>
+              <input type="submit" value="Send" class="m-btn blue"/>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <!--start sidebar-->
+      <div class="col-md-4" id="address">
+        <p><strong>Moyd.co Ltd</strong><br>
+          Allen House Business Centre<br>
+          The Maltings, Station Road <br>
+          Sawbridgeworth, Herts, CM21 9JX<br>
+          United Kingdom<br>
+          VAT ID: GB 182805302<br>
+        </p>
+        <p>You can meet us also <br>
+          <a href="http://london.techhub.com/directions/london-campus/">@TechHub London</a><p>
+        <p>general: <a href="mailto:hello@moyd.com">hello-at-moyd-dot-co</a><br>
+
+        <p><abbr title="Phone">P:</abbr> +44 (0) 20 3529 8491<br>
+          <abbr title="Fax">F:</abbr> +44 (0) 20 7855 3781</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+<br/>
+<!--start footer-->
+<section id="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <!--logo and copyright-->
+      <div class="col-md-3">
+        <a href="#intro" class="brand"><%= image_tag 'logo.png', alt: 'Moyd.co' %></a>
+        <p>2013 © Moyd.co Ltd</p><br>
+        <p>Moyd DNS is product of <a href="http://www.moyd.co" target="_blank">Moyd.co Ltd</a></p><br>
+        <a href='http://ipv6-test.com/validate.php?url=referer' target="_blank"><%= image_tag 'button-ipv6-80x15.png', alt: 'IPv6 Ready', title: 'IPv6 Ready', border: 0 %></a>
+      </div>
+      <!--footer menu-->
+      <div class="col-md-4 offset4">
+        <ul>
+          <li><h5>Menu</h5></li>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#services-top">The Problem</a></li>
+          <li><a href="#works-top">The Solution</a></li>
+          <li><a href="#offer-top">The Offer</a></li>
+          <li><a href="#gallery-top">The Blog</a></li>
+          <li><a href="#team-top">The Team</a></li>
+          <li><a href="#contact-top">Contact us</a></li>
+        </ul>
+      </div>
+      <!--link to social networks-->
+      <div class="col-md-4 offset1">
+        <ul>
+          <li><h5>Social</h5></li>
+          <li><a class="facebook" href="http://www.facebook.com/moyd.co" target="_blank">Facebook</a></li>
+          <li><a class="twitter" href="http://www.twitter.com/MoydCo" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Preload
+  <script type="text/javascript">
+    $(window).load(function() {
+      $("#status").fadeOut();
+      $("#preloader").delay(350).fadeOut("slow");
+    })
+  </script>
+-->
+
+<!--google analytics-->
+<script>
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-45180542-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+</script>
