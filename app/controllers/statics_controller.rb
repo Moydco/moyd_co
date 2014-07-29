@@ -25,6 +25,6 @@ class StaticsController < ApplicationController
   private
 
   def user_attributes
-    params.require(:user).permit(:first_name, :last_name, :email, :opt_in, :to, :message)
+    params.require(:user).permit(:first_name, :last_name, :email, :opt_in, :message)
   end
 end

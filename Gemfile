@@ -51,10 +51,6 @@ gem 'owlcarousel-rails'
 gem 'jquery-easing-rails'
 gem 'nicescroll-rails'
 
-# Easy translations
-gem 'localeapp'
-gem 'http_accept_language'
-
 # Settings
 gem 'rails_config'
 
