@@ -14,4 +14,15 @@ class SubscribeMailer < ActionMailer::Base
     @message    = message
     mail(to: 'hello@moyd.co', subject: 'New message').deliver
   end
+
+  def thank_you_subscription(user)
+    @user = user
+    mail(to: user.email, subject: 'Thank you for your subscription').deliver
+  end
+
+
+  def thank_you_message(user)
+    @user = user
+    mail(to: user.email, subject: 'Thank you for your message').deliver
+  end
 end

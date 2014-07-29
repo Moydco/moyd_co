@@ -17,7 +17,7 @@
         <li><a href="#services-top">The Problem</a></li>
         <li><a href="#works-top">The Solution</a></li>
         <li><a href="#offer-top">The Offer</a></li>
-        <!--<li><a href="#gallery-top">The Blog</a></li>-->
+        <li><a href="#gallery-top">The Blog</a></li>
         <li><a href="#team-top">The Team</a></li>
         <li><a href="#contact-top">Contact us</a></li>
       </ul>
@@ -266,7 +266,7 @@
   -->
 </section>
 
-<!--start blog header
+<!--start blog header -->
 <section id="gallery-top">
   <section id="gallery-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
     <h1 class="header">The blog</h1>
@@ -281,13 +281,15 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <a href="/blog">Read all articles from our blog</a>
+        <h1><%=@post["title"]%></h1>
+        <%=raw @post["content"]%>
+        <h4><a href="https://moyd.co/blog">Read all articles from our blog</a></h4>
       </div>
 
     </div>
   </div>
 </section>
--->
+<!-- end blog header -->
 
 <section id="team-top">
   <!--start team-desktop header-->
@@ -340,11 +342,11 @@
           </div>
           <div class="col-md-3">
             <div class="thumbnail">
-              <%= image_tag 'team_4.jpg', alt: 'Scott Smith' %>
-              <h4>Scott Smith</h4>
+              <%= image_tag 'team_4.jpg', alt: 'Scott Parker' %>
+              <h4>Scott Parker</h4>
               <span>API Lead Developer</span>
               <p>6 years of experience in the Ruby on Rails development.  <br/><br/>
-                <a href="mailto:s.smith@moyd.co">s.smith-at-moyd-dot-co</a></p>
+                <a href="mailto:s.parker@moyd.co">s.parker-at-moyd-dot-co</a></p>
             </div>
           </div>
         </div>
@@ -459,7 +461,7 @@
           <li><a href="#services-top">The Problem</a></li>
           <li><a href="#works-top">The Solution</a></li>
           <li><a href="#offer-top">The Offer</a></li>
-          <!--<li><a href="#gallery-top">The Blog</a></li>-->
+          <<li><a href="#gallery-top">The Blog</a></li>
           <li><a href="#team-top">The Team</a></li>
           <li><a href="#contact-top">Contact us</a></li>
         </ul>
