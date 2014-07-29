@@ -1,8 +1,9 @@
 class SubscribeMailer < ActionMailer::Base
   default from: "no-reply@moyd.co"
 
-  def new_subscription(user)
+  def new_subscription(user,message)
     @user = user
+    @message = message
     mail(to: 'hello@moyd.co', subject: 'New user').deliver
   end
 

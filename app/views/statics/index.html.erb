@@ -377,6 +377,7 @@
       <div class="col-md-8">
         <%= form_for @user, url: statics_path, method: :post, role: :form do |f| %>
           <div class="row">
+            <%= render 'layouts/flashes' %>
             <div class="col-md-3">
               <div class="form-group">
                 <label>First Name:</label>
