@@ -319,7 +319,7 @@
               <h4>Alberto Zuin</h4>
               <span>Co-Founder & CEO</span>
               <p>16 years of experience in the development of technological infrastructure.<br/>
-                <a href="mailto:a.zuin@moyd.co">a.zuin-at-moyd-dot-co</a></p>
+                a.zuin-at-moyd-dot-co</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -328,7 +328,7 @@
               <h4>Harry Tall</h4>
               <span>Co-Founder & Marketing Manager</span>
               <p>19 years of experience as an IT entrepreneur. Bachelor's degree in Marketing. <br/>
-                <a href="mailto:h.tall@moyd.co">h.tall-at-moyd-dot-co</a></p>
+                h.tall-at-moyd-dot-co</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -337,7 +337,7 @@
               <h4>Manuel Zulian</h4>
               <span>Frontend and Core Lead Developer</span>
               <p>5 years of experience in the Java-Scala-JS development.  <br/><br/>
-                <a href="mailto:m.zulian@moyd.co">m.zulian-at-moyd-dot-co</a></p>
+                m.zulian-at-moyd-dot-co</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -346,7 +346,7 @@
               <h4>Scott Parker</h4>
               <span>API Lead Developer</span>
               <p>6 years of experience in the Ruby on Rails development.  <br/><br/>
-                <a href="mailto:s.parker@moyd.co">s.parker-at-moyd-dot-co</a></p>
+               s.parker-at-moyd-dot-co</p>
             </div>
           </div>
         </div>
@@ -401,7 +401,7 @@
             <div class="col-md-3">
               <div class="form-group">
                 <label>Subscribe me to mailing list</label>
-                <%= f.check_box :opt_in, class: 'form-control input-lg' %>
+                <%= f.check_box :opt_in, class: 'form-control input-mi' %>
               </div>
             </div>
           </div>
@@ -453,8 +453,16 @@
         <p>Moyd DNS is product of <a href="http://www.moyd.co" target="_blank">Moyd.co Ltd</a></p><br>
         <a href='http://ipv6-test.com/validate.php?url=referer' target="_blank"><%= image_tag 'button-ipv6-80x15.png', alt: 'IPv6 Ready', title: 'IPv6 Ready', border: 0 %></a>
       </div>
-      <!--footer menu-->
+      <!--link to social networks-->
       <div class="col-md-4 offset4">
+        <h5>Social</h5>
+        <div class="fb-like" data-href="https://moyd.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="https://moyd.co/">Tweet</a></div>
+        <div class="pinterest_button"><a href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmoyd.co&media=https%3A%2F%2Fmoyd.co%2Fassets%2Flogo-00d86ba90150b249db6c393f683dd4a5.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div>
+        <div class="googleplus1_button"><g:plusone></g:plusone></div>
+        </div>
+      <!--footer menu-->
+      <div class="col-md-4 offset1">
         <ul>
           <li><h5>Menu</h5></li>
           <li><a href="#intro">Home</a></li>
@@ -466,16 +474,7 @@
           <li><a href="#contact-top">Contact us</a></li>
         </ul>
       </div>
-      <!--link to social networks-->
-      <div class="col-md-4 offset1">
-        <ul>
-          <li><h5>Social</h5></li>
-          <li><a class="facebook" href="http://www.facebook.com/moyd.co" target="_blank">Facebook</a></li>
-          <li><a class="twitter" href="http://www.twitter.com/MoydCo" target="_blank">Twitter</a></li>
-          <li><a class="google" href="https://plus.google.com/+MoydCo/" target="_blank">Google+</a></li>
-          <li><a class="pinterest" href="http://www.pinterest.com/moydco/" target="_blank">Pinterest</a></li>
-        </ul>
-      </div>
+
     </div>
   </div>
 </section>
@@ -506,3 +505,32 @@
 
 
 </script>
+
+<!--Facebook-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=815756978449035&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--Twitter-->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!--Gplus-->
+<script type="text/javascript">
+  window.___gcfg = {
+    lang: 'en-US'
+  };
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- Pinterest -->
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
