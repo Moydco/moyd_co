@@ -64,6 +64,6 @@ gem 'devise'
 gem 'letter_opener', :group => :development
 gem 'mandrill_mailer'
 
-# Video
-gem 'auto_html'
+# monitor
+gem 'newrelic_rpm'
 
