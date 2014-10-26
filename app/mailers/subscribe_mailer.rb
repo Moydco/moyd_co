@@ -15,14 +15,26 @@ class SubscribeMailer < ActionMailer::Base
     mail(to: 'hello@moyd.co', subject: 'New message').deliver
   end
 
-  def thank_you_subscription(user)
-    @user = user
-    mail(to: user.email, subject: 'Thank you for your subscription').deliver
+  def thank_you_subscription(first_name, last_name, email)
+    @first_name = first_name
+    @last_name  = last_name
+    @email      = email
+    mail(to: @email, subject: 'Thank you for your subscription').deliver
   end
 
 
-  def thank_you_message(user)
-    @user = user
-    mail(to: user.email, subject: 'Thank you for your message').deliver
+  def thank_you_message(first_name, last_name, email)
+    @first_name = first_name
+    @last_name  = last_name
+    @email      = email
+    mail(to: @email, subject: 'Thank you for your message').deliver
+  end
+
+  def credit_card_transaction(invoice, transaction, amount, currency)
+    @invoice     = invoice
+    @transaction = transaction
+    @amount      = amount
+    @currency    = currency
+    mail(to: 'a.zuin@moyd.co', subject: 'Credit card transaction').deliver
   end
 end

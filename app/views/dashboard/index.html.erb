@@ -1,0 +1,258 @@
+<div class="container">
+  <h2 class='header-lined'>My dashboard</h2>
+  <ul class='nav nav-tabs'>
+    <li class='active'>
+      <a data-toggle='tab' href='#home'>
+        <i class='icon-eye-open'></i>
+        My details
+      </a>
+    </li>
+    <li>
+      <a data-toggle='tab' href='#password'>
+        <i class='icon-desktop'></i>
+        My password
+      </a>
+    </li>
+    <li>
+      <a data-toggle='tab' href='#invoices'>
+        <i class='icon-desktop'></i>
+        My invoices
+      </a>
+    </li>
+    <!--
+    <li class='visible-lg'>
+      <a data-toggle='tab' href='#tickets'>
+        <i class='icon-picture'></i>
+        My tickets
+      </a>
+    </li>
+    -->
+  </ul>
+  <div class='tab-content'>
+    <div class='tab-pane active' id='home'>
+      <h4 class='header-lined less-margin'>This are your registred details: <%= link_to 'Contact us', contact_us_statics_path %> if you need to update them.</h4>
+      <%= form_for @user, url: dashboard_path(@user), method: :put do |f| %>
+        <div class="form-group">
+          <%= f.label :given_name, 'Given name' %>
+          <%= f.text_field :given_name, class: 'form-control', :value => @customer.given_name %>
+        </div>
+        <div class="form-group">
+          <%= f.label :family_name, 'Family name' %>
+          <%= f.text_field :family_name, class: 'form-control', :value => @customer.family_name %>
+        </div>
+        <div class="form-group">
+          <%= f.label :company_name, 'Company name' %>
+          <%= f.text_field :company_name, class: 'form-control', :value => @customer.company_name %>
+        </div>
+        <div class="form-group">
+          <%= f.label :web, 'Currency' %>
+          <% if @customer.currency_ref.nil? %>
+            <%= f.text_field :currency, class: 'form-control', disabled: true %>
+          <% else %>
+            <%= f.text_field :currency, class: 'form-control', :value => @customer.currency_ref.value, disabled: true %>
+          <% end %>
+        </div>
+        <div>
+          <p><strong>Address</strong></p>
+        </div>
+        <% if  @customer.billing_address.nil? %>
+          <div class="form-group">
+            <%= f.label :address_line1, 'Address' %>
+            <%= f.text_field :address_line1, class: 'form-control' %>
+
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line2, 'Address' %>
+            <%= f.text_field :address_line2, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line3, 'Address' %>
+            <%= f.text_field :address_line3, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line4, 'Address' %>
+            <%= f.text_field :address_line4, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_city, 'City' %>
+            <%= f.text_field :address_city, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_country_sub_division_code, 'County' %>
+            <%= f.text_field :address_country_sub_division_code, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_country, 'Country' %>
+            <%= f.text_field :address_country, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_postal_code, 'Postal Code' %>
+            <%= f.text_field :address_postal_code, class: 'form-control' %>
+          </div>
+        <% else %>
+          <div class="form-group">
+            <%= f.label :address_line1, 'Address' %>
+            <%= f.text_field :address_line1, class: 'form-control', :value => @customer.billing_address.line1 %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line2, 'Address' %>
+            <%= f.text_field :address_line2, class: 'form-control', :value => @customer.billing_address.line2 %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line3, 'Address' %>
+            <%= f.text_field :address_line3, class: 'form-control', :value => @customer.billing_address.line3 %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_line4, 'Address' %>
+            <%= f.text_field :address_line4, class: 'form-control', :value => @customer.billing_address.line4 %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_city, 'City' %>
+            <%= f.text_field :address_city, class: 'form-control', :value => @customer.billing_address.city %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_country_sub_division_code, 'County' %>
+            <%= f.text_field :address_country_sub_division_code, class: 'form-control', :value => @customer.billing_address.country_sub_division_code %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_country, 'Country' %>
+            <%= f.text_field :address_country, class: 'form-control', :value => @customer.billing_address.country %>
+          </div>
+          <div class="form-group">
+            <%= f.label :address_postal_code, 'Postal Code' %>
+            <%= f.text_field :address_postal_code, class: 'form-control', :value => @customer.billing_address.postal_code %>
+          </div class="form-group">
+        <% end %>
+
+        <div>
+          <p><strong>Phones</strong></p>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone, 'Phone' %>
+          <% if @customer.primary_phone.nil? %>
+            <%= f.text_field :phone %>
+          <% else %>
+            <%= f.text_field :phone, class: 'form-control', :value => @customer.primary_phone.free_form_number %>
+          <% end %>
+        </div>
+        <div class="form-group">
+          <%= f.label :mobile, 'Mobile' %>
+          <% if @customer.mobile_phone.nil? %>
+            <%= f.text_field :mobile_phone, class: 'form-control' %>
+          <% else %>
+            <%= f.text_field :mobile_phone, class: 'form-control', :value => @customer.mobile_phone.free_form_number %>
+          <% end %>
+        </div>
+        <div class="form-group">
+          <%= f.label :fax, 'Fax' %>
+          <% if @customer.fax_phone.nil? %>
+            <%= f.text_field :fax_phone, class: 'form-control' %>
+          <% else %>
+            <%= f.text_field :fax_phone, class: 'form-control', :value => @customer.fax_phone.free_form_number %>
+          <% end %>
+        </div>
+
+        <div>
+          <p><strong>Internet</strong></p>
+        </div>
+        <div class="form-group">
+          <%= f.label :email, 'Email' %>
+          <% if  @customer.primary_email_address.nil? %>
+            <%= f.text_field :email, class: 'form-control', disabled: true %>
+          <% else %>
+            <%= f.text_field :email, class: 'form-control', :value => @customer.primary_email_address.address, disabled: true %>
+          <% end %>
+        </div>
+        <div class="form-group">
+          <%= f.label :web, 'Website' %>
+          <% if @customer.web_site.nil? %>
+            <%= f.text_field :web_site, class: 'form-control' %>
+          <% else %>
+            <%= f.text_field :web_site, class: 'form-control', :value => @customer.web_site.uri %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class='tab-pane' id='password'>
+      <h4 class='header-lined less-margin'>Password update</h4>
+      <%= form_for(@user, :url => { :action => "update_password" }, method: :put ) do |f| %>
+        <div class="field">
+          <%= f.label :password, "Password" %><br />
+          <%= f.password_field :password, :autocomplete => "off"  %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="action_container">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+    <div class='tab-pane' id='invoices'>
+      <h4 class='header-lined less-margin'>My invoices</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <strong>Invoice Number</strong>
+          </div>
+          <div class="col-md-2">
+            <strong>Date</strong>
+          </div>
+          <div class="col-md-2">
+            <strong>Due Date</strong>
+          </div>
+          <div class="col-md-2">
+            <strong>Balance</strong>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+        <% @invoices.entries.each do |invoice| %>
+          <div class="row">
+            <div class="col-md-2">
+              <%= invoice.doc_number %>
+            </div>
+            <div class="col-md-2">
+              <%= invoice.txn_date %>
+            </div>
+            <div class="col-md-2">
+              <%= invoice.due_date %>
+            </div>
+            <div class="col-md-2">
+              <%= invoice.total_amount %> <%= invoice.currency_ref.value %>
+            </div>
+            <div class="col-md-4">
+              <% if invoice.balance > 0%>
+                <% if invoice.private_note.nil? or invoice.private_note.blank? %>
+                  <%= form_tag dashboard_index_path do %>
+                    <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Settings.stripe_public_key %>"
+                    data-amount="<%= (invoice.total_amount*100).to_i %>"
+                    data-name="<%= @application_name %>"
+                    data-description="Pay <%= invoice.total_amount %> <%= invoice.currency_ref.value %>"
+                    data-currenncy="<%= invoice.currency_ref.value %>"
+                    data-email="<%= current_user.email %>"
+                    >
+                    </script>
+                    <%= hidden_field_tag :invoice, invoice.id %>
+                  <% end %>
+                <% else %>
+                  Transaction recorded
+                <% end %>
+              <% else %>
+                Nothing to do
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class='tab-pane' id='tickets'>
+      <h4 class='header-lined less-margin'>Coming soon...</h4>
+    <p>We are working hard to add new features: please, be kind.</p>
+                                                           </div>
+  </div>
+</div>
+

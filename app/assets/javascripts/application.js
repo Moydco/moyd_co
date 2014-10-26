@@ -12,12 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require retina
-//= require bootstrap-lightbox.min
-//= require jquery.easing
-//= require jquery.nicescroll
-//= require jquery.stellar.min
-//= require jquery.form
 //= require turbolinks
+//= require tab
+//= require modal
 //= require_tree .

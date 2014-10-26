@@ -38,8 +38,10 @@ class User
   field :last_name, type: String
   field :opt_in, type: Boolean
   field :opt_in_date, type: DateTime
+  field :quickbooks_id, type: String
 
-  attr_accessor :message
+  attr_accessor :message, :invoice
+  attr_accessor :given_name, :family_name, :company_name, :address_line1, :mobile_phone, :fax_phone, :web_site
 
   validates_presence_of :first_name, :last_name
   validates_format_of :email,:with => Devise::email_regexp
@@ -60,9 +62,11 @@ class User
   end
 
   def set_password
-    generated_password = Devise.friendly_token.first(8)
-    self.password = generated_password
-    self.password_confirmation = generated_password
+    if (self.password.nil? and self.password.blank?) and (self.password_confirmation.nil? and self.password_confirmation.blank?)
+      generated_password = Devise.friendly_token.first(8)
+      self.password = generated_password
+      self.password_confirmation = generated_password
+    end
   end
 
   def add_user_to_mailchimp

@@ -1,0 +1,47 @@
+<div class='highlight-content highlighted-image text-center cta-box light signin'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <h1 class='animated fadeInDown'>Sign in</h1>
+        <p class='animated fadeInUp'>If you are a customer, log in to find an incredible set of tools!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Log in your account</h2>
+
+      <%= form_for(resource, as: resource_name, url: user_session_path()) do |f| %>
+        <div><%= f.label 'Email:' %><br />
+          <%= f.email_field :email, autofocus: true %></div>
+
+        <div><%= f.label 'Password:' %><br />
+          <%= f.password_field :password, autocomplete: "off" %></div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+        <% end -%>
+
+        <div><%= f.submit "Log in" %></div>
+      <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Recover account by invoice number</h2>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div><%= f.label 'Instert an invoice number: we will send by email the instrauction to log in:'%><br />
+          <%= f.text_field :invoice, autofocus: true %>
+        </div>
+
+        <div><br/><%= f.submit "Send me reset password instructions" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

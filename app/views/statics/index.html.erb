@@ -1,530 +1,407 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#home-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="#intro" class="navbar-brand"><%= image_tag 'logo.png', alt: 'Moyd.co' %></a>
-    </div>
-
-
-    <div class="navbar-collapse collapse pull-right" id="home-navbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#services-top">The Problem</a></li>
-        <li><a href="#works-top">The Solution</a></li>
-        <li><a href="#offer-top">The Offer</a></li>
-        <li><a href="#gallery-top">The Blog</a></li>
-        <li><a href="#team-top">The Team</a></li>
-        <li><a href="#contact-top">Contact us</a></li>
-      </ul>
+<section class='leaderboard leaderboard-style-one'>
+  <div class='container'>
+    <h1 class='animated fadeInDown'>MOYD.CO DNS: be the Master Of Your Domain!</h1>
+    <h2 class='animated fadeInDown'>We're Route53 for your Hybrid Cloud: perfect for Openstack & OpenNebula</h2>
+    <div class='relative-w'>
+      <div class='frame-browser animated bounceInUp'>
+        <div class='frame-buttons'>
+          <div class='frame-button-close'></div>
+          <div class='frame-button-max'></div>
+          <div class='frame-button-min'></div>
+        </div>
+        <div class='frame-browser-image'>
+          <%= image_tag 'showcase.jpg' %>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</section>
+<div class='separator-shadow-top above-screenshot-shadow'>
+  <%= image_tag 'shadow-separator-wide-top.png' %>
+</div>
+</div>
+<div class='area-content'>
+<div class='container'>
+<div class='separator-shadow-top sub-screenshot-shadow'>
+  <%= image_tag 'shadow-separator-wide-top.png' %>
+</div>
+<div class='iconed-features lift-on-hover style-1'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='feature-icon-w'>
+          <i class='icon-eye-open'></i>
+        </div>
+        <h4>A powerful DNS</h4>
+        <p>Written in Scala with security and speed in mind: the faster Dynamic DNS on the planet.</p>
 
-<!-- Intro -->
-<section id="intro">
-  <div class="container">
-    <div class="row">
-      <div class="span8 offset2 margin25">
-        <div id="carousel_fade_intro" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
-          <div class="carousel-inner">
-            <div class="active item">
-              <h1>Introducing MOYD DNS</h1>
-            </div>
-            <div class="item">
-              <h2>Be the Master Of Your Domain...</h2>
-            </div>
-            <div class="item">
-              <h2>We're Route53 for your Hybrid Cloud</h2>
-            </div>
-            <div class="item">
-              <h2>Perfect for Openstack & OpenNebula</h2>
-            </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='feature-icon-w'>
+          <i class='icon-cog'></i>
+        </div>
+        <h4>A complete API ecosystem</h4>
+        <p>An complete set of API to control every aspect of the system, easly integrable with your dashboard.</p>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='feature-icon-w'>
+          <i class='icon-signal'></i>
+        </div>
+        <h4>An health check system</h4>
+        <p>Active or passive checks to react and update records accordling to the event on your systems.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='separator-shadow-bottom bottom-margin'>
+  <%= image_tag 'shadow-separator-wide-bottom.png' %>
+</div>
+<div class='row bottom-margin'>
+  <div class='col-md-5'>
+    <h2 class='header-lined'>The problems</h2>
+    <ul class='list-checkmarked text-bigger'>
+      <li>
+        <b>How can I avoid unnecessary costs?</b><br />
+        Eliminate emergency security patching,<br />
+        Forget about scheduling of updates,<br />
+        Consolidate all your DNS servers,<br />
+        Reduce customer support calls.
+      </li>
+      <li>
+        <b>How can I avoid unnecessary risks?</b><br />
+        Prevent security breaches from malicious code,<br />
+        Eliminate risk of platform compromise,<br />
+        Availability during denial of service attacks,<br />
+        Distribute load on multiple datacenter.
+      </li>
+      <li>
+        <b>How can I avoid unnecessary hurdles?</b><br />
+        Increase DNS performance and capacity,<br />
+        Stay online even while under attack,<br />
+        Avoid downtime due to DNS server restarts,<br />
+        Integrate in your existing cloud.
+      </li>
+    </ul>
+    <!-- %a.btn.btn-default{:href => "#"} Show me Example -->
+  </div>
+  <div class='col-md-1'></div>
+  <div class='col-md-6'>
+    <div class='relative-w'>
+      <div class='frame-browser animated-when-visible' data-animation-type='bounceInRight'>
+        <div class='frame-buttons'>
+          <div class='frame-button-close'></div>
+          <div class='frame-button-max'></div>
+          <div class='frame-button-min'></div>
+        </div>
+        <div class='frame-browser-image'>
+          <%= image_tag 'problem.jpg' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='separator-shadow-top bottom-margin'>
+  <%= image_tag 'shadow-separator-wide-top.png' %>
+</div>
 
+<div class='row bottom-margin'>
+  <div class='col-md-6'>
+    <div class='relative-w'>
+      <div class='frame-browser animated-when-visible' data-animation-type='bounceInRight'>
+        <div class='frame-buttons'>
+          <div class='frame-button-close'></div>
+          <div class='frame-button-max'></div>
+          <div class='frame-button-min'></div>
+        </div>
+        <div class='frame-browser-image'>
+          <%= image_tag 'solution.jpg' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-1'></div>
+  <div class='col-md-5'>
+    <h2 class='header-lined'>The solution</h2>
+    <ul class='list-checkmarked text-bigger'>
+      <li>
+        <b>A complete product!</b><br />
+        DNS daemon written for speed and security,<br />
+        Check system to dynamically update records,<br />
+        APIs for integrating it with your apps,<br />
+        An auth plugin for OpenStack & OpenNebula.
+      </li>
+      <li>
+        <b>Distibute everything!</b><br />
+        Multidatacenter by default,<br />
+        Shared nothing architecture (SN),<br />
+        Multidatacenter routing via Anycast BGP,<br />
+        Resilient to multiple datacenter failures.
+      </li>
+      <li>
+        <b>Scale to incredible load!</b><br />
+        DNS servers works in RAM to increase speed,<br />
+        Scale to hundreds of servers via Anycast OSPF,<br />
+        Distribute load on multiple endpoints,<br />
+        Native GeoDNS via Anycast resolution.
+      </li>
+    </ul>
+    <!-- %a.btn.btn-default{:href => "#"} Show me Example -->
+  </div>
+</div>
+
+</div>
+<!--
+<div class='highlight-content bottom-margin light'>
+  <div class='carousel slide' id='carousel-testimonials'>
+
+    <ol class='carousel-indicators'>
+      <li class='active' data-slide-to='0' data-target='#carousel-testimonials'></li>
+      <li data-slide-to='1' data-target='#carousel-testimonials'></li>
+    </ol>
+    <div class='carousel-inner'>
+      <div class='item active'>
+        <div class='container'>
+          <div class='testimonial'>
+            <div class='testimonial-icon'>
+              <i class='icon-quote-left'></i>
+            </div>
+            <p>"This is an absolutely powerful system, easy to integrate in our infrastructre. I am glad I bought it and I will definitely recommend it!"</p>
+            <div class='testimonial-by'>Chris Mayers - UK Cloud</div>
+          </div>
+        </div>
+      </div>
+      <div class='item'>
+        <div class='container'>
+          <div class='testimonial'>
+            <div class='testimonial-icon'>
+              <i class='icon-quote-left'></i>
+            </div>
+            <p>"The power of a professional active DNS, but without the needs of a worldwide infrastructure. Now I can compete with big cloud providers!"</p>
+            <div class='testimonial-by'>Mark Eldinberg - Yorkshire Systems</div>
           </div>
         </div>
       </div>
     </div>
+    <a class='left carousel-control' data-slide='prev' href='#carousel-testimonials'>
+      <span class='icon-prev'></span>
+    </a>
+    <a class='right carousel-control' data-slide='next' href='#carousel-testimonials'>
+      <span class='icon-next'></span>
+    </a>
   </div>
-</section>
-
-<!--start services header-->
-<section id="services-top">
-  <!--start services-desktop header-->
-  <section id="services-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">The Problem</h1>
-    <p class="header">Do I have a DNS problem?</p>
-  </section>
-  <!--start services-mobile header-->
-  <section id="services-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">The Problem</h1>
-    <p class="header">Do I have a DNS problem?</p>
-  </section>
-</section>
-
-<!--start services-->
-<section id="services">
-  <div class="container-fluid">
-    <div class="row"> <!-- divide -->
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'money' %>
-          <h4>Reducing Costs</h4>
-          <span>How can I avoid unnecessary costs?</span>
-          <p>
-
-            Eliminate emergency security patching<br>
-            Forget about scheduling of updates<br>
-            Consolidate all your DNS servers<br>
-            Reduce customer support calls</p>
-
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'lemon-o' %>
-          <h4>Reducing Risks</h4>
-          <span>How can I avoid unnecessary Risks?</span>
-          <p>
-            Prevent security breaches from malicious code<br>
-            Eliminate risk of platform compromise<br>
-            Availability during denial of service attacks<br>
-            Distribute load on multiple datacenter</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'check-square-o' %>
-          <h4>Reduce Bottlenecks</h4>
-          <span>How can I avoid unnecessary hurdles?</span>
-          <p>
-            Increase DNS performance and capacity<br>
-            Stay online even while under attack<br>
-            Avoid downtime due to DNS server restarts<br>
-            Integrate in your existing cloud<br>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--
-  <div class="fadeInUp delay animated hidden-phone" id="more">
-    <a href="#works-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
-  </div>
-  -->
-</section>
-
-<!--start works header-->
-<section id="works-top">
-  <!--start works-desktop header-->
-  <section id="works-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">The Solution</h1>
-    <p class="header">We're Route53 for your Open Cloud Software</p>
-  </section>
-  <!--start works-mobile header-->
-  <section id="works-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">The Solution</h1>
-    <p class="header">We're Route53 for your Open Cloud Software</p>
-  </section>
-</section>
-<!--start works-->
-<section id="services">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'sitemap' %>
-          <h4>A complete product</h4>
-          <span>What is moyd?</span>
-          <p>
-
-            A DNS server written for speed and security<br>
-            A check system which dynamically update DNS<br>
-            APIs for integrating it with your apps<br>
-            An auth plugin for OpenStack & OpenNebula </p>
-
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'building' %>
-          <h4>Distibute everything</h4>
-          <span>How can I sleep well?</span>
-          <p>
-            Multidatacenter by default<br>
-            Shared nothing architecture (SN)<br>
-            Multidatacenter routing via Anycast BGP<br>
-            Resilient to multiple datacenter failures</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= fa_icon 'angle-double-up' %>
-          <h4>Scale to incredible load</h4>
-          <span>How can I always perform well?</span>
-          <p>
-            DNS servers works in RAM to increase speed<br>
-            Scale to hundreds of servers via Anycast OSPF<br>
-            Distribute load on multiple endpoints<br>
-            Native GeoDNS via Anycast resolution<br>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--
-  <div class="fadeInUp delay animated hidden-phone" id="more">
-    <a href="#gallery-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
-  </div>
-  -->
-</section>
-
-<!--start offer header-->
-<section id="offer-top">
-  <!--start gallery-desktop header-->
-  <section id="offer-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">The offer</h1>
-    <p class="header">Our complete offer...</p>
-  </section>
-  <!--start gallery-mobile header-->
-  <section id="offer-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">The offer</h1>
-    <p class="header">Our complete offer...</p>
-  </section>
-</section>
-<!--start gallery-->
-<!--start thumbnails section-->
-<section id="offer">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 thumbnail">
-        <h4>Community Edition</h4>
-        <span>Free installable appliance</span>
-        <p>Free DNS appliance integrable with OpenNebula Sunstone. <br/>
-          Automatic creation and configuration of FQDN and reverse DNS resolution from VM contextualization.<br/>
-          <strong>Coming Soon</strong></p>
-      </div>
-      <div class="col-md-3 thumbnail">
-        <h4>User edition</h4>
-        <span>SaaS for final user</span>
-        <p>Complete solution for final customer:<br/>
-          - instantiate as many DNS domains and record as you like<br/>
-          - multidatacenter AnyCast infrastructure<br/>
-          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
-          - High Availability, Load Balancing and GeoDNS routing policies<br/>
-          - Internal alias for maximum speed without chaining multiple CNAME<br/>
-          - PING and HTTP check<br/>
-          - Web and API Interface<br />
-          - pay only as you use: number of zones, number of checks, queries resolved<br/>
-          <strong>Coming Soon</strong></p>
-      </div>
-      <div class="col-md-3 thumbnail">
-        <h4>On-Cloud Edition</h4>
-        <span>SaaS for Cloud provider</span>
-        <p>Complete reseller solution:<br/>
-          - instantiate as many DNS domains and record as you like<br/>
-          - multidatacenter AnyCast infrastructure<br/>
-          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
-          - High Availability, Load Balancing and GeoDNS routing policies<br/>
-          - Internal alias for maximum speed without chaining multiple CNAME<br/>
-          - PING and HTTP check<br/>
-          - Web and API Interface<br />
-          - pay only as you use: number of zones, number of checks, queries resolved<br/>
-          - discount for big quantity<br/>
-          - reseller administration panel<br/>
-          <strong>Coming Soon</strong></p>
-      </div>
-      <div class="col-md-3 thumbnail">
-        <h4>On-Premise Edition</h4>
-        <span>Installable in big infrastructure.</span>
-        <p>Installable solution for CDN and Cloud owner:<br/>
-          - instantiate as many DNS domains and record as you like<br/>
-          - multidatacenter AnyCast infrastructure<br/>
-          - A, AAAA, MX, CNAME, TXT, SRV Records<br/>
-          - High Availability, Load Balancing and GeoDNS routing policies<br/>
-          - Internal alias for maximum speed without chaining multiple CNAME<br/>
-          - PING and HTTP check<br/>
-          - API Only Interface<br />
-          - license valid for life, no limit on installations<br/>
-          - possibility to externalize installation and maintenance<br/>
-          - priority assistance by phone<br/>
-          <strong>Contact us for a demo</strong></p>
-      </div>
-
-    </div>
-  </div>
-  <!--
-  <div class="fadeInUp delay animated hidden-phone" id="more">
-    <a href="#team-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
-  </div>
-  -->
-</section>
-
-<!--start blog header -->
-<section id="gallery-top">
-  <section id="gallery-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">The blog</h1>
-    <p class="header">Last article from our blog...</p>
-  </section>
-  <section id="gallery-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">The blog</h1>
-    <p class="header">Last article from our blog...</p>
-  </section>
-</section>
-<section id="gallery">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <a href="<%=@post["url"]%>"><h1><%=@post["title"]%></h1></a>
-        <%=raw @post["content"]%>
-        <h4><a href="https://moyd.co/blog">Read all articles from our blog</a></h4>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- end blog header -->
-
-<section id="team-top">
-  <!--start team-desktop header-->
-  <section id="team-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">The Team</h1>
-    <p class="header">Coffees and Apple</p>
-  </section>
-  <!--start team-mobile header-->
-  <section id="team-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">The Team</h1>
-    <p class="header">Coffees and Apple</p>
-  </section>
-</section>
-<!--start team-->
-<section id="team">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="span8 offset2">
-        <h1>We are MOYD</h1>
-        <p class="center">We are a small team of passionate developers highly focused on creating the best DNS in the World. </p>
-      </div>
-      <div class="span12">
-        <div class="thumbnails">
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <%= image_tag 'team_1.jpg', alt: 'Alberto Zuin' %>
-              <h4>Alberto Zuin</h4>
-              <span>Co-Founder & CEO</span>
-              <p>16 years of experience in the development of technological infrastructure.<br/>
-                a.zuin-at-moyd-dot-co</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <%= image_tag 'team_2.jpg', alt: 'Enrico Talin' %>
-              <h4>Enrico Talin</h4>
-              <span>Co-Founder & Marketing Manager</span>
-              <p>19 years of experience as an IT entrepreneur. Bachelor's degree in Marketing. <br/>
-                e.talin-at-moyd-dot-co</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <%= image_tag 'team_3.jpg', alt: 'Manuel Zulian' %>
-              <h4>Manuel Zulian</h4>
-              <span>Frontend and Core Lead Developer</span>
-              <p>5 years of experience in the Java-Scala-JS development.  <br/><br/>
-                m.zulian-at-moyd-dot-co</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <%= image_tag 'team_4.jpg', alt: 'Scott Parker' %>
-              <h4>Scott Parker</h4>
-              <span>API Lead Developer</span>
-              <p>6 years of experience in the Ruby on Rails development.  <br/><br/>
-               s.parker-at-moyd-dot-co</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--
-    <div class="fadeInUp delay animated hidden-phone" id="more">
-      <a href="#contact-top" class="m-btn a-btn blue big icn-only"><i class="icon-sort-down icon-3x pull-left"></i></a>
-    </div>
-    -->
-  </div>
-</section>
-<!--start contact header-->
-<section id="contact-top">
-  <!--start contact-desktop header-->
-  <section id="contact-top-desktop" class="visible-md-* visible-lg-*" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-    <h1 class="header">Contact us for a Demo</h1>
-    <p class="header">Or.. Fill up our inbox, we like that</p>
-  </section>
-  <!--start contact-mobile header-->
-  <section id="contact-top-mobile" class="hidden-md hidden-lg">
-    <h1 class="header">Contact for a Demo</h1>
-    <p class="header">Fill up our inbox, we like that</p>
-  </section>
-</section>
-<!--start contact-->
-<section id="contact">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8">
-        <%= form_for @user, url: statics_path, method: :post, role: :form do |f| %>
-          <div class="row">
-            <%= render 'layouts/flashes' %>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label>First Name:</label>
-                <%= f.text_field :first_name, class: 'form-control input-lg', placeholder: 'Your first name' %>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label>Last Name:</label>
-                <%= f.text_field :last_name, class: 'form-control input-lg', placeholder: 'Your last name' %>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label>Email:</label>
-                <%= f.email_field :email, class: 'form-control input-lg', placeholder: 'Your email address' %>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label>Subscribe me to mailing list</label>
-                <%= f.check_box :opt_in, class: 'form-control input-mi' %>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group">
-              <div class="col-md-12">
-                <label>Message:</label>
-                <%= f.text_area :message, class: 'form-control input-lg', rows: 12, cols: 80 %>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="message"><div class="alert"></div></div>
-              <input type="submit" value="Send" class="m-btn blue"/>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <!--start sidebar-->
-      <div class="col-md-4" id="address">
-        <p><strong>Moyd.co Ltd</strong><br>
-          Allen House Business Centre<br>
-          The Maltings, Station Road <br>
-          Sawbridgeworth, Herts, CM21 9JX<br>
-          United Kingdom<br>
-          VAT ID: GB 182805302<br>
-        </p>
-        <p>You can meet us also <br>
-          <a href="http://london.techhub.com/directions/london-campus/">@TechHub London</a><p>
-        <p>general: hello-at-moyd-dot-co<br>
-
-        <p><abbr title="Phone">P:</abbr> +44 (0) 20 3529 8491</p>
-        <p><abbr title="Phone">Tech support:</abbr> +44 (0) 161 850 3720</p>
-        <p><abbr title="Email">24/7 Email support:</abbr> <a href="mailto:support@moyd.co">support-at-moyd.co</a></p>
-
-      </div>
-    </div>
-  </div>
-</section>
-<br/>
-<!--start footer-->
-<section id="footer">
-  <div class="container-fluid">
-    <div class="row">
-      <!--logo and copyright-->
-      <div class="col-md-3">
-        <a href="#intro" class="brand"><%= image_tag 'logo.png', alt: 'Moyd.co' %></a>
-        <p>2013 © Moyd.co Ltd</p><br>
-        <p>Moyd DNS is product of <a href="http://www.moyd.co" target="_blank">Moyd.co Ltd</a></p><br>
-        <a href='http://ipv6-test.com/validate.php?url=referer' target="_blank"><%= image_tag 'button-ipv6-80x15.png', alt: 'IPv6 Ready', title: 'IPv6 Ready', border: 0 %></a>
-      </div>
-      <!--link to social networks-->
-      <div class="col-md-4 offset4">
-        <h5>Social</h5>
-        <div class="fb-like" data-href="https://moyd.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-        <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="https://moyd.co/">Tweet</a></div>
-        <div class="pinterest_button"><a href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmoyd.co&media=https%3A%2F%2Fmoyd.co%2Fassets%2Flogo-00d86ba90150b249db6c393f683dd4a5.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div>
-        <div class="googleplus1_button"><g:plusone></g:plusone></div>
-        </div>
-      <!--footer menu-->
-      <div class="col-md-4 offset1">
-        <ul>
-          <li><h5>Menu</h5></li>
-          <li><a href="#intro">Home</a></li>
-          <li><a href="#services-top">The Problem</a></li>
-          <li><a href="#works-top">The Solution</a></li>
-          <li><a href="#offer-top">The Offer</a></li>
-          <li><a href="#gallery-top">The Blog</a></li>
-          <li><a href="#team-top">The Team</a></li>
-          <li><a href="#contact-top">Contact us</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Preload
-  <script type="text/javascript">
-    $(window).load(function() {
-      $("#status").fadeOut();
-      $("#preloader").delay(350).fadeOut("slow");
-    })
-  </script>
+</div>
 -->
+<div class='separator-shadow-top above-screenshot-shadow'>
+  <%= image_tag 'shadow-separator-wide-top.png' %>
+</div>
+<div class='container'>
+<h2 class='header-lined has-sub-header text-center' id='anchorFeatures'>More Features</h2>
+<h4 class='sub-lined-header text-center'>...and more are coming!</h4>
+<div class='iconed-features style-2'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-ok'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Complete record types</h4>
+            <p>We support A, AAAA, CNAME, MX, NS, PTR, TXT, SRV. We are working for DNSSEC records.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-exchange'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Versioning system</h4>
+            <p>The history of your records, to undo a wrong change in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-cloud-upload'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Passive checks</h4>
+            <p>Customer servers can directly talk to DNS without the need of an external check system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='iconed-features style-2'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-random'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Multiple routing mode</h4>
+            <p>We support High Availability, Load Balancing and Latency routing mode.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-eye-open'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Internal Alias (ANAME)</h4>
+            <p>No need to respond with a tree of CNAME records: our DNS resolves internally and responds with A/AAAA record.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='iconed-feature'>
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='feature-icon-w animated-when-visible' data-animation-type='rollIn'>
+              <i class='icon-cloud'></i>
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <h4>Open Cloud Compatible</h4>
+            <p>Easy to integrate with OpenNebula and OpenCloud, the de-facto standards for private/hybrid cloud.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='separator-shadow-top above-screenshot-shadow'>
+  <%= image_tag 'shadow-separator-wide-top.png' %>
+</div>
+<h2 class='header-lined has-sub-header text-center' id='anchorPricing'>Pricing Tables</h2>
+<h4 class='sub-lined-header text-center'>We offer multiple pricing plans to go with your new account.</h4>
+<div class='pricing-table-columns bottom-margin'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <div class='plan-column'>
+        <h4>Community Edition</h4>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='plan-price'>
+          Free
+        </div>
+        <div class='separator-shadow-bottom'>
+          <%= image_tag 'shadow-separator-narrow-bottom.png' %>
+        </div>
+        <ul>
+          <li>
+            <strong>Free</strong>
+            DNS appliance integrable with OpenNebula Sunstone.
+          </li>
+          <li>
+            <strong>Automatic</strong>
+            creation and configuration of FQDN and reverse DNS resolution from VM contextualization.
+          </li>
+        </ul>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='button-w'>
+          <a class='btn btn-primary' href='#'>Coming soon</a>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='plan-column highlight'>
+        <h4>On-Cloud Edition</h4>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='plan-price'>
+          £99
+          <span>minimum top-up</span>
+        </div>
+        <div class='separator-shadow-bottom'>
+          <%= image_tag 'shadow-separator-narrow-bottom.png' %>
+        </div>
+        <ul>
+          <li>
+            <strong>Unlimited</strong>
+            DNS domains and record
+          </li>
+          <li>
+            <strong>Pay only as you use</strong>
+            number of zones, number of checks, queries resolved
+          </li>
+          <li>
+            <strong>Complete reseller solution</strong>
+            with administration panel
+          </li>
+        </ul>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='button-w'>
+          <a class='btn btn-primary' href='#'>Coming soon</a>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4'>
+      <div class='plan-column'>
+        <h4>Advanced</h4>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='plan-price'>
+          £ 5.900
+        </div>
+        <div class='separator-shadow-bottom'>
+          <%= image_tag 'shadow-separator-narrow-bottom.png' %>
+        </div>
+        <ul>
+          <li>
+            Installable solution for <strong>CDN and Cloud</strong> owner
+          </li>
+          <li>
+            license valid for life,
+            <strong>no limits on installations</strong>
+          </li>
+        </ul>
+        <div class='separator-shadow-top'>
+          <%= image_tag 'shadow-separator-narrow-top.png' %>
+        </div>
+        <div class='button-w'>
+          <a class='btn btn-primary' href='#'>Contact us for a demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!--google analytics-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-45180542-1', 'moyd.co');
-  ga('require', 'displayfeatures');
-  ga('send', 'pageview');
-</script>
-
-<!--Facebook-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=815756978449035&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!--Twitter-->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<!--Gplus-->
-<script type="text/javascript">
-  window.___gcfg = {
-    lang: 'en-US'
-  };
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-<!-- Pinterest -->
-<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+</div>
+</div>

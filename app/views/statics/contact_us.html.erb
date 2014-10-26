@@ -1,0 +1,85 @@
+<div class='highlight-content highlighted-image text-center cta-box light contact'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <h1 class='animated fadeInDown'>Contact us</h1>
+        <p class='animated fadeInUp'>Or.. Fill up our inbox, we like that!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<div class='container'>
+<!--start contact-->
+<section id="contact">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <%= form_for @user, url: statics_path, method: :post, role: :form do |f| %>
+          <div class="row">
+            <%= render 'layouts/flashes' %>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>First Name:</label>
+                <%= f.text_field :first_name, class: 'form-control input-lg', placeholder: 'Your first name' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Last Name:</label>
+                <%= f.text_field :last_name, class: 'form-control input-lg', placeholder: 'Your last name' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Email:</label>
+                <%= f.email_field :email, class: 'form-control input-lg', placeholder: 'Your email address' %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Subscribe me to the mailing list</label>
+                <%= f.check_box :opt_in, class: 'form-control input-mi' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>Message:</label>
+                <%= f.text_area :message, class: 'form-control input-lg', rows: 12, cols: 80 %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="message"><div class="alert"></div></div>
+              <input type="submit" value="Send" class="m-btn blue"/>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <!--start sidebar-->
+      <div class="col-md-4" id="address">
+        <p><strong>Moyd.co Ltd</strong><br>
+          Allen House Business Centre<br>
+          The Maltings, Station Road <br>
+          Sawbridgeworth, Herts, CM21 9JX<br>
+          United Kingdom<br>
+          VAT ID: GB 182805302<br>
+          Company registration: 08743831
+        </p>
+        <p>You can meet us also <br>
+          <a href="http://london.techhub.com/directions/london-campus/">@TechHub London</a><p>
+        <p>general: hello-at-moyd-dot-co<br>
+
+        <p>General phone: +44 (0) 20 3529 8491</p>
+        <p>Tech support: +44 (0) 161 850 3720</p>
+        <p>24/7 Email support: <a href="mailto:support@moyd.co">support-at-moyd.co</a></p>
+
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
