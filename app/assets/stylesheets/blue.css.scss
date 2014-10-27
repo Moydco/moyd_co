@@ -7541,7 +7541,7 @@ td.loupe.loupe-large {
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
   padding-top: 90px;
   padding-bottom: 90px;
-  background: url(hero-home.jpg);
+  background: url(image-path("hero-home.jpg"));
   background-repeat: repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -7552,7 +7552,7 @@ td.loupe.loupe-large {
     box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     padding-top: 90px;
     padding-bottom: 90px;
-    background: url(Support-page-banner.jpg);
+    background: url(image-path("Support-page-banner.jpg"));
     background-repeat: repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -7565,7 +7565,7 @@ td.loupe.loupe-large {
     box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     padding-top: 90px;
     padding-bottom: 90px;
-    background: url(contact_bg.jpg);
+    background: url(image-path("contact_bg.jpg"));
     background-repeat: repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -7578,7 +7578,7 @@ td.loupe.loupe-large {
     box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     padding-top: 90px;
     padding-bottom: 90px;
-    background: url(services_bg.jpg);
+    background-image: url(image-path("services_bg.jpg"));
     background-repeat: repeat;
     -webkit-background-size: cover;
     background-size: cover;
