@@ -4,5 +4,6 @@
 Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
-# application.js, application.css.sass, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( statics.css statics.js zoomico.png blog.css swipebox.css blue.css animate.min.css )
+# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+Rails.application.config.assets.precompile += %w( app.css animate.min.css blue.css swipebox.css theme.css statics.css dashboard.css)
+#statics.css statics.js
