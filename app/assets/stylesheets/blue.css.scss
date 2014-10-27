@@ -8135,7 +8135,7 @@ td.loupe.loupe-large {
 footer#main-footer {
   padding: 50px 0px;
   background-color: #246BA5;
-  background: url("hero-bg.jpg");
+  background: url(image-path("hero-bg.jpg"));
   background-repeat: repeat;
   margin-top: 30px;
 }
@@ -8727,7 +8727,7 @@ footer#main-footer .footer-menu li a {
   width: 20px;
   height: 20px;
   border-radius: 2px;
-  background: #5f3c22 url(bg-wood.jpg) top left repeat;
+  background: #5f3c22 url(image-path("bg-wood.jpg")) top left repeat;
   -webkit-box-shadow: inset 1px 1px 1px rgba(255,255,255,0.3);
   box-shadow: inset 1px 1px 1px rgba(255,255,255,0.3);
   border: 1px solid #4F4D45;
@@ -8789,13 +8789,13 @@ footer#main-footer .footer-menu li a {
 }
 .color_settings_box .color-box-linen-dark {
   background-color: #323641;
-  background-image: url(body-linen.jpg);
+  background-image: url(image-path("body-linen.jpg"));
   background-repeat: repeat;
   background-position: top left;
 }
 .color_settings_box .color-box-linen-light {
   background-color: #b0b1b4;
-  background-image: url(linen-grey.jpg);
+  background-image: urlimage-path("linen-grey.jpg");
   background-repeat: repeat;
   background-position: top left;
 }
