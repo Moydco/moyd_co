@@ -3,13 +3,13 @@
   <ul class='nav nav-tabs'>
     <li class='active'>
       <a data-toggle='tab' href='#home'>
-        <i class='icon-eye-open'></i>
+        <i class='icon-user'></i>
         My details
       </a>
     </li>
     <li>
       <a data-toggle='tab' href='#password'>
-        <i class='icon-desktop'></i>
+        <i class='icon-eye-open'></i>
         My password
       </a>
     </li>
@@ -19,14 +19,12 @@
         My invoices
       </a>
     </li>
-    <!--
-    <li class='visible-lg'>
+    <li>
       <a data-toggle='tab' href='#tickets'>
-        <i class='icon-picture'></i>
+        <i class='icon-list'></i>
         My tickets
       </a>
     </li>
-    -->
   </ul>
   <div class='tab-content'>
     <div class='tab-pane active' id='home'>
@@ -250,9 +248,17 @@
       </div>
     </div>
     <div class='tab-pane' id='tickets'>
-      <h4 class='header-lined less-margin'>Coming soon...</h4>
-    <p>We are working hard to add new features: please, be kind.</p>
-                                                           </div>
+      <h4 class='header-lined less-margin'>How to request our help</h4>
+      <p>
+        The best way to interact with us is to send an email to <a href="mailto: support@moyd.co">support@moyd.co</a> from your email <%=current_user.email%>.
+        If you want to use another email to talk with us, please submit your request via the <%= link_to 'Contact Form', contact_us_statics_path %>.
+      </p>
+      <p>You can also use the chat box below: if we are not online, don't worry: we will be notified immediatly via email.</p>
+      <p>At last if you prefere using the phone, call our helpdesk at +44 (0) 161 850 3720.</p>
+      <p>All your requests will be managed by our <a href="https://moydco.zendesk.com">customer support</a> portal.</p>
+      <p>Before log in for the first time, you have to setup your password clicking on <a href="https://moydco.zendesk.com/access/unauthenticated?return_to=https%3A%2F%2Fmoydco.zendesk.com%2Fhc%2Fen-gb&theme=hc#">Forgot my password</a>.</p>
+      <p>Feel free to login to our customer support portal to view your ticket status.</p>
+    </div>
   </div>
 </div>
 
