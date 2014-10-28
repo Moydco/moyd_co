@@ -94,6 +94,7 @@ GEM
     connection_pool (2.0.0)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
+    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     excon (0.40.0)
     execjs (2.2.2)
@@ -133,6 +134,8 @@ GEM
       actionpack
       activesupport
       mandrill-api (~> 1.0.9)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (2.4.3)
     mini_portile (0.6.0)
     minitest (5.4.2)
@@ -263,6 +266,7 @@ DEPENDENCIES
   coffee-rails
   devise!
   devise-encryptable
+  dynamic_sitemaps
   font-awesome-rails
   gibbon
   jbuilder
@@ -270,6 +274,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   mandrill_mailer
+  meta-tags
   mongoid (~> 4)!
   newrelic_rpm
   nicescroll-rails

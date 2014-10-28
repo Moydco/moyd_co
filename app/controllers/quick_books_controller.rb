@@ -1,9 +1,10 @@
 class QuickBooksController < ApplicationController
   def index
-
+    set_meta_tags :noindex => true
   end
 
   def authenticate
+    set_meta_tags :noindex => true
     callback = oauth_callback_quick_books_url
     token = $qb_oauth_consumer.get_request_token(:oauth_callback => 'https://moyd.co/quick_books/oauth_callback')
     session[:qb_request_token] = Marshal.dump(token)
@@ -11,6 +12,7 @@ class QuickBooksController < ApplicationController
   end
 
   def oauth_callback
+    set_meta_tags :noindex => true
     logger.debug session[:qb_request_token]
     at = Marshal.load(session[:qb_request_token]).get_access_token(:oauth_verifier => params[:oauth_verifier])
     token_storage = TokenStorage.find_or_create_by(oauth_provider: 'quickbooks')

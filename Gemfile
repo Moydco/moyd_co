@@ -74,3 +74,7 @@ gem 'oauth-plugin'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'whenever', :require => false
 
+# SEO
+gem 'meta-tags'
+gem 'dynamic_sitemaps'
+

@@ -3,18 +3,46 @@ class StaticsController < ApplicationController
   require 'httparty'
 
   def index
-
+    set_meta_tags :title => 'Cloud Operator DNS Software'
+    set_meta_tags :description => 'Moyd.co is the new Cloud Operator Monitor and DNS Server Software with High Availability, Load Balancing and GeoDNS functionality. Now, be the Master Of Your Domain!'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, DNS, monitor, GeoDNS, Load Balancing, High Availability, GeoDNS, Anycast, server, Cloud, OpenNebula, OpenStack'
+    set_meta_tags :og => {
+        :title => 'Cloud Operator DNS Software',
+        :description => 'Moyd.co is the new Cloud Operator Monitor and DNS Server Software with High Availability, Load Balancing and GeoDNS functionality. Now, be the Master Of Your Domain!'
+    }
   end
 
   def support
+    set_meta_tags :title => 'Linux server admin and programming'
+    set_meta_tags :description => 'Moyd.co can help your business to plan, install and mantain all your server infrasfructure. Also web and mobile development with the most advanced programming tools.'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, server, linux, maintenance, administration, programming, ruby on rails, scala, angularjs, java, python, mongodb'
+    set_meta_tags :og => {
+        :title => 'Linux server admin and programming',
+        :description => 'Moyd.co can help your business to plan, install and mantain all your server infrasfructure. Also web and mobile development with the most advanced programming tools.'
 
+    }
   end
 
   def team
+    set_meta_tags :title => 'Meet the dream team'
+    set_meta_tags :description => 'Moyd.co has a costantly growing team of system engineering and developer. This is the core team, here to help you!'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, alberto zuin, manuel zulian, enrico talin, zuin alberto, zulian manule, talin enrico, team'
+    set_meta_tags :og => {
+        :title => 'Meet the dream team',
+        :description => 'Moyd.co has a costantly growing team of system engineering and developer. This is the core team, here to help you!'
 
+    }
   end
 
   def contact_us
+    set_meta_tags :title => 'Contact us'
+    set_meta_tags :description => 'You can contact Moyd.co team using this form. If you are a customer, you can have a complete ticket support system to track your request.'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, contact us, email'
+    set_meta_tags :og => {
+        :title => 'Contact us',
+        :description => 'You can contact Moyd.co team using this form. If you are a customer, you can have a complete ticket support system to track your request.'
+
+    }
     @user = User.new
   end
 
