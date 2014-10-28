@@ -76,5 +76,5 @@ gem 'whenever', :require => false
 
 # SEO
 gem 'meta-tags'
-gem 'dynamic_sitemaps'
+gem 'sitemap_generator'
 
