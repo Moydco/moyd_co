@@ -7552,7 +7552,7 @@ td.loupe.loupe-large {
     box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     padding-top: 90px;
     padding-bottom: 90px;
-    background: url(image-path("Support-page-banner.jpg"));
+    background: url(image-path("computer-programmer.jpg"));
     background-repeat: repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -7578,12 +7578,24 @@ td.loupe.loupe-large {
     box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url(image-path("services_bg.jpg"));
+    background-image: url(image-path("works_bg.jpg"));
     background-repeat: repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
 
+
+.highlight-content.highlighted-image-dns {
+  background-color: #eee;
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url(image-path("services_bg.jpg"));
+  background-repeat: repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 .highlight-content.light {
   color: #fff;
 }

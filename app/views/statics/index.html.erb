@@ -1,3 +1,16 @@
+<div class='highlight-content highlighted-image-dns text-center cta-box light'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <h1 class='animated fadeInDown'>MOYD.CO DNS: <br />be the Master Of Your Domain!</h1>
+        <p class='animated fadeInUp'>We're Route53 for your Hybrid Cloud:<br/>perfect for Openstack & OpenNebula.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <section class='leaderboard leaderboard-style-one'>
   <div class='container'>
     <h1 class='animated fadeInDown'>MOYD.CO DNS: be the Master Of Your Domain!</h1>
@@ -10,15 +23,17 @@
           <div class='frame-button-min'></div>
         </div>
         <div class='frame-browser-image'>
-          <%= image_tag 'showcase.jpg' %>
+          <%# image_tag 'showcase.jpg' %>
         </div>
       </div>
     </div>
   </div>
 </section>
 <div class='separator-shadow-top above-screenshot-shadow'>
-  <%= image_tag 'shadow-separator-wide-top.png' %>
+  <%# image_tag 'shadow-separator-wide-top.png' %>
 </div>
+
+-->
 </div>
 <div class='area-content'>
 <div class='container'>
@@ -118,7 +133,7 @@
           <div class='frame-button-min'></div>
         </div>
         <div class='frame-browser-image'>
-          <%= image_tag 'solution.jpg' %>
+          <%= image_tag 'showcase.jpg' %>
         </div>
       </div>
     </div>
@@ -367,19 +382,19 @@
           <%= image_tag 'shadow-separator-narrow-top.png' %>
         </div>
         <div class='button-w'>
-          <a class='btn btn-primary' href='#'>Coming soon</a>
+          <%= link_to 'Register', contact_us_statics_path, class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
     <div class='col-md-4'>
       <div class='plan-column'>
-        <h4>Advanced</h4>
+        <h4>On-Premise Edition</h4>
         <div class='separator-shadow-top'>
           <%= image_tag 'shadow-separator-narrow-top.png' %>
         </div>
         <div class='plan-price'>
           £ 5.900
-          <span>one shot</span>
+          <span>one time charge</span>
         </div>
         <div class='separator-shadow-bottom'>
           <%= image_tag 'shadow-separator-narrow-bottom.png' %>
@@ -397,7 +412,7 @@
           <%= image_tag 'shadow-separator-narrow-top.png' %>
         </div>
         <div class='button-w'>
-          <a class='btn btn-primary' href='#'>Contact us for a demo</a>
+          <%= link_to 'Contact us for a demo', contact_us_statics_path, class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
