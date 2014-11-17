@@ -1,4 +1,4 @@
-class TokenStorage
+class Subscription
   include Mongoid::Document
   field :product,            type: String
   field :description,        type: String
