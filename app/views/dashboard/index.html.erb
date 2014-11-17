@@ -19,6 +19,14 @@
         My invoices
       </a>
     </li>
+    <% if @user.subscriptions.count > 0 %>
+      <li>
+        <a data-toggle='tab' href='#subscription'>
+          <i class='icon-link'></i>
+          My subscriptions
+        </a>
+      </li>
+    <% end %>
     <li>
       <a data-toggle='tab' href='#tickets'>
         <i class='icon-list'></i>
@@ -246,6 +254,48 @@
           </div>
         <% end %>
       </div>
+    </div>
+    <div class='tab-pane' id='subscriptions'>
+      <div class="row">
+        <div class="col-md-2">
+          <strong>Product</strong>
+        </div>
+        <div class="col-md-4">
+          <strong>Description</strong>
+        </div>
+        <div class="col-md-2">
+          <strong>Rate</strong>
+        </div>
+        <div class="col-md-2">
+          <strong>Next renew</strong>
+        </div>
+        <div class="col-md-2">
+          <strong>Remaining units</strong>
+        </div>
+      </div>
+      <% @user.subscriptions.each do |subscription| %>
+        <div class="row">
+          <div class="col-md-2">
+            <%=subscription.product %>
+          </div>
+          <div class="col-md-4">
+            <%=subscription.product %>
+          </div>
+          <div class="col-md-2">
+            <%=subscription.description %>
+          </div>
+          <div class="col-md-2">
+            <% if subscription.recurring%>
+              At the end of next <%=subscription.month %>
+            <% end %>
+          </div>
+          <div class="col-md-2">
+            <% if subscription.maintenance%>
+              <%=subscription.item_quantity + ' ' + subscription.item_type%>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class='tab-pane' id='tickets'>
       <div class="row">
