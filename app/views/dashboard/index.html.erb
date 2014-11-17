@@ -279,10 +279,10 @@
             <%=subscription.product %>
           </div>
           <div class="col-md-4">
-            <%=subscription.product %>
+            <%=subscription.description %>
           </div>
           <div class="col-md-2">
-            <%=subscription.description %>
+            <%= "%.2f" % (subscription.rate.to_f/100) %>
           </div>
           <div class="col-md-2">
             <% if subscription.recurring%>
