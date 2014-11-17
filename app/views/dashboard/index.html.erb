@@ -271,7 +271,7 @@
             <%= ticket.id %>
           </div>
           <div class="col-md-4">
-            <%= ticket.subject %>
+            <%= ticket.subject.truncate(27, separator: ' ') %>
           </div>
           <div class="col-md-2">
             <%= ticket.created_at %>
