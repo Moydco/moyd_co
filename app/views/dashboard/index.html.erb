@@ -271,13 +271,13 @@
             <%= ticket.id %>
           </div>
           <div class="col-md-4">
-            <%= ticket.subject.truncate(27, separator: ' ') %>
+            <%= ticket.subject.truncate(47, separator: ' ') %>
           </div>
           <div class="col-md-2">
-            <%= ticket.created_at %>
+            <%= ticket.created_at.strftime('%d-%m-%Y %k:%M:%S') %>
           </div>
           <div class="col-md-2">
-            <%= ticket.updated_at %>
+            <%= ticket.updated_at.strftime('%d-%m-%Y %k:%M:%S') %>
           </div>
           <div class="col-md-2">
             <%= ticket.status %>
