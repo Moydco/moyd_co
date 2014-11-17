@@ -25,8 +25,8 @@ class DashboardController < ApplicationController
         config.token = Settings.zendesk_secret
         config.retry = true
       end
-      zendesk_user = @zendesk_client.users.search(query: @user.email).first
-      @tickets = @zendesk_client.search(query: 'requester:' + zendesk_user.id.to_s + ' type:ticket')
+      @zendesk_user = @zendesk_client.users.search(query: @user.email).first
+      @tickets = @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket')
     end
   end
 

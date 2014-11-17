@@ -292,11 +292,11 @@
           <div class="col-md-2">
             <% if subscription.maintenance%>
               <% if subscription.item_type == 'tickets' %>
-                <% q = subscription.item_quantity - @zendesk_client.search(query: 'requester:' + zendesk_user.id.to_s + ' type:ticket tags:' + subscription.id.to_s).count %>
+                <% q = subscription.item_quantity - @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket tags:' + subscription.id.to_s).count %>
               <% else %>
                 <% q = subscription.item_quantity %>
               <% end %>
-              <%=subscription.item_quantity + ' ' + subscription.item_type%>
+              <%=q.to_s + ' ' + subscription.item_type%>
             <% end %>
           </div>
         </div>
