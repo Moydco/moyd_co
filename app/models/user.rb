@@ -39,6 +39,7 @@ class User
   field :opt_in, type: Boolean
   field :opt_in_date, type: DateTime
   field :quickbooks_id, type: String
+  field :admin, type: Boolean, default: false
 
   attr_accessor :message, :invoice
   attr_accessor :given_name, :family_name, :company_name, :address_line1, :mobile_phone, :fax_phone, :web_site

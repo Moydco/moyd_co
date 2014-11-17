@@ -3,30 +3,34 @@ class DashboardController < ApplicationController
 
   def index
     @user = current_user
-    token=TokenStorage.where(oauth_provider: 'quickbooks').first
-    if token.nil?
-      raise 'Accounting software not connected'
+    if @user.admin
+
     else
-      access_token = OAuth::AccessToken.new($qb_oauth_consumer, token.access_token, token.access_secret)
+      token=TokenStorage.where(oauth_provider: 'quickbooks').first
+      if token.nil?
+        raise 'Accounting software not connected'
+      else
+        access_token = OAuth::AccessToken.new($qb_oauth_consumer, token.access_token, token.access_secret)
 
-      service_customer = Quickbooks::Service::Customer.new
-      service_customer.company_id = token.company_id
-      service_customer.access_token = access_token
-      @customer = service_customer.fetch_by_id(@user.quickbooks_id)
+        service_customer = Quickbooks::Service::Customer.new
+        service_customer.company_id = token.company_id
+        service_customer.access_token = access_token
+        @customer = service_customer.fetch_by_id(@user.quickbooks_id)
 
-      service_invoices = Quickbooks::Service::Invoice.new
-      service_invoices.company_id = token.company_id
-      service_invoices.access_token = access_token
-      @invoices = service_invoices.query.entries.find_all{ |e| e.customer_ref.value == @user.quickbooks_id}
+        service_invoices = Quickbooks::Service::Invoice.new
+        service_invoices.company_id = token.company_id
+        service_invoices.access_token = access_token
+        @invoices = service_invoices.query.entries.find_all{ |e| e.customer_ref.value == @user.quickbooks_id}
 
-      @zendesk_client = ZendeskAPI::Client.new do |config|
-        config.url = Settings.zendesk_url
-        config.username = Settings.zendesk_user
-        config.token = Settings.zendesk_secret
-        config.retry = true
+        @zendesk_client = ZendeskAPI::Client.new do |config|
+          config.url = Settings.zendesk_url
+          config.username = Settings.zendesk_user
+          config.token = Settings.zendesk_secret
+          config.retry = true
+        end
+        @zendesk_user = @zendesk_client.users.search(query: @user.email).first
+        @tickets = @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket')
       end
-      @zendesk_user = @zendesk_client.users.search(query: @user.email).first
-      @tickets = @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket')
     end
   end
 

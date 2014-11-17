@@ -13,7 +13,7 @@ class Subscription
 
   belongs_to :user
 
-  validates_presence_of :product, :description, :rate
+  validates_presence_of  :product, :description, :rate
   validates_inclusion_of :item_type, in: %w(hours tickets)
   validates_inclusion_of :month, in: 1..12, allow_nil: true
 end
