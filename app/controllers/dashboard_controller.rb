@@ -19,14 +19,14 @@ class DashboardController < ApplicationController
       service_invoices.access_token = access_token
       @invoices = service_invoices.query.entries.find_all{ |e| e.customer_ref.value == @user.quickbooks_id}
 
-      zendesk_client = ZendeskAPI::Client.new do |config|
+      @zendesk_client = ZendeskAPI::Client.new do |config|
         config.url = Settings.zendesk_url
         config.username = Settings.zendesk_user
         config.token = Settings.zendesk_secret
         config.retry = true
       end
-      zendesk_user = zendesk_client.users.search(query: @user.email).first
-      @tickets = zendesk_client.search(query: 'requester:' + zendesk_user.id.to_s + ' type:ticket')
+      zendesk_user = @zendesk_client.users.search(query: @user.email).first
+      @tickets = @zendesk_client.search(query: 'requester:' + zendesk_user.id.to_s + ' type:ticket')
     end
   end
 
