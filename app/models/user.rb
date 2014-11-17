@@ -43,7 +43,7 @@ class User
   attr_accessor :message, :invoice
   attr_accessor :given_name, :family_name, :company_name, :address_line1, :mobile_phone, :fax_phone, :web_site
 
-  has_many :subscriprions
+  has_many :subscriptions
 
   validates_presence_of :first_name, :last_name
   validates_format_of :email,:with => Devise::email_regexp
