@@ -73,6 +73,7 @@ gem 'quickbooks-ruby'
 gem 'oauth-plugin'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'whenever', :require => false
+gem 'zendesk_api'
 
 # SEO
 gem 'meta-tags'

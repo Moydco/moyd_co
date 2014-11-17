@@ -18,6 +18,9 @@ class DashboardController < ApplicationController
       service_invoices.company_id = token.company_id
       service_invoices.access_token = access_token
       @invoices = service_invoices.query.entries.find_all{ |e| e.customer_ref.value == @user.quickbooks_id}
+
+      zendesk_user = $zendesk_client.users.search(query: @user.email).first
+      @tickets = $zendesk_client.search(query: 'requester:' + zendesk_user.id + ' type:ticket')
     end
   end
 

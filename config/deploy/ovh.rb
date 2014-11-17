@@ -7,9 +7,9 @@ set :tmp_dir, '/home/moyd.co/shared/tmp'
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{85.159.208.99}
-role :web, %w{85.159.208.99}
-role :db,  %w{85.159.208.99}
+role :app, %w{5.196.46.176}
+role :web, %w{5.196.46.176}
+role :db,  %w{5.196.46.176}
 
 # Extended Server Syntax
 # ======================
@@ -44,8 +44,8 @@ set :ssh_options, {
 
 # fetch(:default_env).merge!(rails_env: :staging)
 
-set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.1.1@moyd.co'
+set :rvm_type, :system
+set :rvm_ruby_version, 'ruby@moyd.co'
 set :rails_env, :production
 
 #load 'deploy/assets'
