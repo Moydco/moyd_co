@@ -47,7 +47,11 @@ class SubscriptionsController < ApplicationController
     @subscription.update_attribute(:enabled, !@subscription.enabled) unless @subscription.nil?
 
     SubscribeMailer.suspend_resume_subscription(@subscription)
-    redirect_to subscriptions_path(user_id: @user.id)
+    if current_user.admin
+      redirect_to subscriptions_path(user_id: @user.id)
+    else
+      redirect_to dashboard_index_path
+    end
   end
 
   private
