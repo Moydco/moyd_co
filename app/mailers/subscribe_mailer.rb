@@ -37,4 +37,9 @@ class SubscribeMailer < ActionMailer::Base
     @currency    = currency
     mail(to: 'a.zuin@moyd.co', subject: 'Credit card transaction').deliver
   end
+
+  def suspend_resume_subscription(subscription)
+    @subscription = Subscription.find(subscription)
+    mail(to: 'a.zuin@moyd.co', subject: 'Subscription Suspended/Resumed').deliver
+  end
 end

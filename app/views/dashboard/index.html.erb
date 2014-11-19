@@ -286,45 +286,48 @@
       </div>
       <div class='tab-pane' id='subscriptions'>
         <div class="row">
-          <div class="col-md-1">
+          <div class="col-md-3">
             <strong>ID</strong>
           </div>
           <div class="col-md-2">
             <strong>Product</strong>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <strong>Description</strong>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-1">
             <strong>Rate</strong>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-1">
             <strong>Next renew</strong>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-1">
             <strong>Remaining units</strong>
+          </div>
+          <div class="col-md-1">
+            <strong>Action</strong>
           </div>
         </div>
         <% @user.subscriptions.each do |subscription| %>
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-3">
               <%=subscription.id %>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
               <%=subscription.product %>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <%=subscription.description %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
               <%= "%.2f" % (subscription.rate.to_f/100) %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
               <% if subscription.recurring%>
                 At the end of next <%=subscription.month %>
               <% end %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
               <% if subscription.maintenance%>
                 <% if subscription.item_type == 'tickets' %>
                   <% q = subscription.item_quantity - @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket tags:' + subscription.id.to_s).count %>
@@ -332,6 +335,13 @@
                   <% q = subscription.item_quantity %>
                 <% end %>
                 <%=q.to_s + ' ' + subscription.item_type%>
+              <% end %>
+            </div>
+            <div class="col-md-1">
+              <% if subscription.enabled%>
+                <%= link_to 'Suspend', subscription_path(user_id: @user, id: subscription), method: :delete %>
+              <% else %>
+                <%= link_to 'Enable', subscription_path(user_id: @user, id: subscription), method: :delete %>
               <% end %>
             </div>
           </div>
