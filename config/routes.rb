@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index, :create, :update] do
     collection do
       put :update_password
+      resources :subscriptions
     end
   end
 

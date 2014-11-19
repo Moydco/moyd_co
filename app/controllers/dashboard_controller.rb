@@ -85,7 +85,6 @@ class DashboardController < ApplicationController
   private
 
   def user_params
-    # NOTE: Using `strong_parameters` gem
     params.required(:user).permit(:password, :password_confirmation)
   end
 

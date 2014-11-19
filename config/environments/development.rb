@@ -36,7 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { host: 'https://moyd.co' }
-  config.to_prepare { Devise::SessionsController.force_ssl }
-  config.to_prepare { Devise::RegistrationsController.force_ssl }
-  config.to_prepare { Devise::PasswordsController.force_ssl }
+  #config.to_prepare { Devise::SessionsController.force_ssl }
+  #config.to_prepare { Devise::RegistrationsController.force_ssl }
+  #config.to_prepare { Devise::PasswordsController.force_ssl }
 end

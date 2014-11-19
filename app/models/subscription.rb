@@ -8,8 +8,9 @@ class Subscription
   field :maintenance,        type: Boolean, default: false
   field :item_type,          type: String,  default: 'hours'
   field :item_quantity,      type: Integer
-  field :cumulable,          type: Boolean, default: false
+  field :combinable,         type: Boolean, default: false
   field :recurring,          type: Boolean, default: true
+  field :enabled,            type: Boolean, default: true
 
   belongs_to :user
 

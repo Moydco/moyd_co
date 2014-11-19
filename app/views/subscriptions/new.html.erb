@@ -1,0 +1,6 @@
+<% if current_user.admin %>
+  <div class="container">
+    <h2>New subscriptions for <%=@user.email%></h2>
+    <%= render partial: 'form', locals: {subscription: @subscription} %>
+  </div>
+<% end %>

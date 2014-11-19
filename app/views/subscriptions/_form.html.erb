@@ -1,0 +1,49 @@
+<%= form_for subscription do |f|%>
+
+  <div class="field">
+    <%= f.label :product, "Product" %><br />
+    <%= f.text_field :product %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Description" %><br />
+    <%= f.text_field :description, size: 160 %>
+  </div>
+  <div class="field">
+    <%= f.label :rate, "Rate" %><br />
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :interval, "Interval" %><br />
+    <%= f.select(:interval, options_for_select([%w( year  ),%w( month )])) %>
+  </div>
+  <div class="field">
+    <%= f.label :month, "Month" %><br />
+    <%= f.select(:month, options_for_select((1..12).map {|m| [Date::MONTHNAMES[m], m]})) %>
+  </div>
+  <div class="field">
+    <%= f.label :maintenance, "Maintenance" %><br />
+    <%= f.check_box :maintenance %>
+  </div>
+  <div class="field">
+    <%= f.label :item_type, "Item type" %><br />
+    <%= f.select(:item_type, options_for_select([%w( hours  ),%w( tickets )])) %>
+  </div>
+  <div class="field">
+    <%= f.label :item_quantity, "Item quantity" %><br />
+    <%= f.text_field :item_quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :combinable, "Combinable" %><br />
+    <%= f.check_box :combinable %>
+  </div>
+  <div class="field">
+    <%= f.label :recurring, "Recurring" %><br />
+    <%= f.check_box :recurring %>
+  </div>
+
+  <div class="action_container">
+    <%= f.hidden_field(:user_id, value: @user.id ) %>
+    <%= f.submit %>
+  </div>
+
+<% end %>
