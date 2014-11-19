@@ -2,6 +2,14 @@ class SubscriptionsController < ApplicationController
   def index
     if current_user.admin
       @user = User.find(params[:user_id])
+      @zendesk_client = ZendeskAPI::Client.new do |config|
+        config.url = Settings.zendesk_url
+        config.username = Settings.zendesk_user
+        config.token = Settings.zendesk_secret
+        config.retry = true
+      end
+      @zendesk_user = @zendesk_client.users.search(query: @user.email).first
+      @tickets = @zendesk_client.search(query: 'requester:' + @zendesk_user.id.to_s + ' type:ticket')
     end
   end
 
