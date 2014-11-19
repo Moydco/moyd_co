@@ -44,9 +44,9 @@ class SubscriptionsController < ApplicationController
       @subscription = current_user.subscriptions.find(params[:id])
     end
 
-    SubscribeMailer.suspend_resume_subscription(@subscription)
-
     @subscription.update_attribute(:enabled, !@subscription.enabled) unless @subscription.nil?
+
+    SubscribeMailer.suspend_resume_subscription(@subscription)
     redirect_to subscriptions_path(user_id: @user.id)
   end
 
