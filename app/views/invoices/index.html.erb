@@ -22,7 +22,7 @@
         <% if invoice_doc.invoice.url.nil? %>
           <%= invoice.doc_number %>
         <% else %>
-          <%= link_to invoice.doc_number, invoice_path(invoice_doc, user_id: @user.id) %>
+          <%= link_to invoice.doc_number, invoice_path(invoice_doc, user_id: @user.id), target: '_blank' %>
         <% end %>
       </div>
       <div class="col-md-2">
