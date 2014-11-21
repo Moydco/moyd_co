@@ -42,7 +42,7 @@ class User
   field :admin, type: Boolean, default: false
 
   attr_accessor :message, :invoice
-  attr_accessor :given_name, :family_name, :company_name, :address_line1, :mobile_phone, :fax_phone, :web_site
+  attr_accessor :given_name, :family_name, :company_name, :address_line1, :primary_phone, :mobile_phone, :fax_phone, :web_site
 
   has_many :subscriptions
 
