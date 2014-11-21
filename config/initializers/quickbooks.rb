@@ -1,10 +1,10 @@
 # Development
-#QB_KEY = 'qyprdXLlPllI3h7t0IBq54Ye9QL43Z'
-#QB_SECRET = 'jZjTGCkmSS7tdXJ2kSiVeMGcwTYDgDXPGOB7kKPB'
+QB_KEY = 'qyprdqkbx8SBc7cAadgcrzL2jfLUJO'
+QB_SECRET = 'JoGfp4ESZ6KxYJTqxfRKmmT8WuHYU8EMETwJrILR'
 
 # Production
-QB_KEY = 'qyprdYCiudqTtfOWSCd2mPNoduLVtc'
-QB_SECRET = 'XQtqDgG116hCC3CUihSHQcdp9cXMrbZWuCZ2qHSe'
+#QB_KEY = 'qyprdYCiudqTtfOWSCd2mPNoduLVtc'
+#QB_SECRET = 'XQtqDgG116hCC3CUihSHQcdp9cXMrbZWuCZ2qHSe'
 
 $qb_oauth_consumer = OAuth::Consumer.new(QB_KEY, QB_SECRET, {
     :site                 => 'https://oauth.intuit.com',

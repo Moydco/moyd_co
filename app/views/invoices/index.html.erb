@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <strong>Invoice Number</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Date</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Due Date</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Balance</strong>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+  <% @invoices.entries.each do |invoice| %>
+    <% invoice_doc = @user.invoices.find_or_create_by(number: invoice.doc_number) %>
+    <div class="row">
+      <div class="col-md-2">
+        <% if invoice_doc.invoice.url.nil? %>
+          <%= invoice.doc_number %>
+        <% else %>
+          <%= link_to invoice.doc_number, invoice_path(invoice_doc, user_id: @user.id) %>
+        <% end %>
+      </div>
+      <div class="col-md-2">
+        <%= invoice.txn_date %>
+      </div>
+      <div class="col-md-2">
+        <%= invoice.due_date %>
+      </div>
+      <div class="col-md-2">
+        <%= invoice.total_amount %> <%= invoice.currency_ref.value %>
+      </div>
+      <div class="col-md-4">
+        <% if invoice_doc.invoice.url.nil? %>
+          <%= link_to 'Upload invoice', new_invoice_path(user_id: @user.id, invoice_id: invoice_doc.id) %>
+        <% else %>
+          <%= link_to 'Delete invoice', invoice_path(invoice_doc, user_id: @user.id), method: :delete %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

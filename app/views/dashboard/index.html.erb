@@ -9,7 +9,7 @@
         <strong>Total Rates</strong>
       </div>
       <div class="col-md-2">
-        <strong>Edit Subscriptions</strong>
+        <strong>Actions</strong>
       </div>
     </div>
     <% User.where(admin: false).each do |user| %>
@@ -21,7 +21,8 @@
           <%= "%.2f" %  ((user.subscriptions.sum(&:rate)).to_f/100) %>
         </div>
         <div class="col-md-2">
-          <%= link_to 'Edit Subscriptions', subscriptions_path(user_id: user) %>
+          <%= link_to 'Edit Subscriptions', subscriptions_path(user_id: user) %> <br/>
+          <%= link_to 'Edit Invoices', invoices_path(user_id: user) %>
         </div>
       </div>
     <% end %>
@@ -244,9 +245,14 @@
             </div>
           </div>
           <% @invoices.entries.each do |invoice| %>
+            <% invoice_doc = @user.invoices.find_or_create_by(number: invoice.doc_number) %>
             <div class="row">
               <div class="col-md-2">
-                <%= invoice.doc_number %>
+                <% if invoice_doc.invoice.url.nil? %>
+                  <%= invoice.doc_number %>
+                <% else %>
+                  <%= link_to invoice.doc_number, invoice_path(invoice_doc, user_id: @user.id) %>
+                <% end %>
               </div>
               <div class="col-md-2">
                 <%= invoice.txn_date %>

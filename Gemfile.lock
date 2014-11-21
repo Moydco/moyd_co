@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/ahoward/mongoid-grid_fs.git
+  revision: 9ab0ca49add11a276c87c3e5da15fb0e282fcff7
+  specs:
+    mongoid-grid_fs (2.1.0)
+      mime-types (>= 1.0, < 3.0)
+      mongoid (>= 3.0, < 5.0)
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: f4f489e45adb0059fae6854d8a29ebb79cc6c8fd
   specs:
@@ -82,6 +90,15 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    carrierwave-mongoid (0.7.1)
+      carrierwave (>= 0.8.0, < 0.11.0)
+      mongoid (>= 3.0, < 5.0)
+      mongoid-grid_fs (>= 1.3, < 3.0)
     chronic (0.10.2)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -273,6 +290,7 @@ DEPENDENCIES
   capistrano-ext
   capistrano-rails
   capistrano-rvm
+  carrierwave-mongoid
   coffee-rails
   devise!
   devise-encryptable
@@ -285,6 +303,7 @@ DEPENDENCIES
   mandrill_mailer
   meta-tags
   mongoid (~> 4)!
+  mongoid-grid_fs!
   newrelic_rpm
   nicescroll-rails
   oauth-plugin

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       put :update_password
       resources :subscriptions
+      resources :invoices
     end
   end
 

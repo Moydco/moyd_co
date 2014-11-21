@@ -74,6 +74,8 @@ gem 'oauth-plugin'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'whenever', :require => false
 gem 'zendesk_api'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 # SEO
 gem 'meta-tags'
