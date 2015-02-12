@@ -2,6 +2,16 @@ class StaticsController < ApplicationController
   require 'json'
   require 'httparty'
 
+  def infrastructure
+    set_meta_tags :title => 'Carrier Grade infrastructure'
+    set_meta_tags :description => 'Moyd.co has a worldwide server infrastructure to host your internet application in the most secure way. Now, be the Master Of Your Domain!'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, server, infrastructure, hosting, web, mail'
+    set_meta_tags :og => {
+                      :title => 'Carrier Grade infrastructure',
+                      :description => 'Moyd.co has a worldwide server infrastructure to host your internet application in the most secure way. Now, be the Master Of Your Domain!'
+                  }
+  end
+
   def dns
     set_meta_tags :title => 'Cloud Operator DNS Software'
     set_meta_tags :description => 'Moyd.co is the new Cloud Operator Monitor and DNS Server Software with High Availability, Load Balancing and GeoDNS functionality. Now, be the Master Of Your Domain!'

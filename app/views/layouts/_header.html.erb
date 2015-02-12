@@ -60,6 +60,16 @@
               </li>
             <% end %>
 
+            <% if action_name == 'infrastructure' %>
+              <li class='current active'>
+                <%= link_to 'Infrastructure', infrastructure_statics_path, class: 'current' %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to 'Infrastructure', infrastructure_statics_path %>
+              </li>
+            <% end %>
+
             <% if action_name == 'dns' %>
               <li class='current active'>
                 <%= link_to 'DNS App', dns_statics_path, class: 'current' %>

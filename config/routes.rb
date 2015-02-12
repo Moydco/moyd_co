@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :statics, only: [:create] do
     collection do
       get :dns
+      get :infrastructure
       get :support
       get :team
       get :contact_us

@@ -7584,6 +7584,17 @@ td.loupe.loupe-large {
     background-size: cover;
 }
 
+.highlight-content.highlighted-image-hosting {
+  background-color: #eee;
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url(image-path("background-slim.jpg"));
+  background-repeat: repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 
 .highlight-content.highlighted-image-dns {
   background-color: #eee;
