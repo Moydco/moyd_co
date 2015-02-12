@@ -19,13 +19,14 @@ Rails.application.routes.draw do
       passwords: 'users/passwords'
   }
 
-  resources :statics, only: [:index, :create] do
+  resources :statics, only: [:create] do
     collection do
+      get :dns
       get :support
       get :team
       get :contact_us
     end
   end
 
-  root to: 'statics#index'
+  root to: 'statics#support'
 end

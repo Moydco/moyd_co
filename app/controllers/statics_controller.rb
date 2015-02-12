@@ -2,7 +2,7 @@ class StaticsController < ApplicationController
   require 'json'
   require 'httparty'
 
-  def index
+  def dns
     set_meta_tags :title => 'Cloud Operator DNS Software'
     set_meta_tags :description => 'Moyd.co is the new Cloud Operator Monitor and DNS Server Software with High Availability, Load Balancing and GeoDNS functionality. Now, be the Master Of Your Domain!'
     set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, DNS, monitor, GeoDNS, Load Balancing, High Availability, GeoDNS, Anycast, server, Cloud, OpenNebula, OpenStack'

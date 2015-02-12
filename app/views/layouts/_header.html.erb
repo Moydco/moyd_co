@@ -49,15 +49,6 @@
                 </li>
               <% end %>
             <% end %>
-            <% if action_name == 'index' %>
-              <li class='current active'>
-                <%= link_to 'DNS App', root_path, class: 'current' %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to 'DNS App', root_path %>
-              </li>
-            <% end %>
 
             <% if action_name == 'support' %>
               <li class='current active'>
@@ -66,6 +57,16 @@
             <% else %>
               <li>
                 <%= link_to 'App Development', support_statics_path %>
+              </li>
+            <% end %>
+
+            <% if action_name == 'dns' %>
+              <li class='current active'>
+                <%= link_to 'DNS App', dns_statics_path, class: 'current' %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to 'DNS App', dns_statics_path %>
               </li>
             <% end %>
 
@@ -99,3 +100,4 @@
   <div class='separator-shadow-bottom'>
     <%= image_tag 'shadow-separator-wide-bottom.png' %>
   </div>
+</div>
