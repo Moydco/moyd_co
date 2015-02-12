@@ -42,7 +42,7 @@
 </div>
 <div class='iconed-features lift-on-hover style-1'>
   <div class='row'>
-    <div class='col-md-4'>
+    <div class='col-md-3'>
       <div class='iconed-feature'>
         <div class='feature-icon-w'>
           <i class='icon-eye-open'></i>
@@ -52,7 +52,7 @@
 
       </div>
     </div>
-    <div class='col-md-4'>
+    <div class='col-md-3'>
       <div class='iconed-feature'>
         <div class='feature-icon-w'>
           <i class='icon-cog'></i>
@@ -61,13 +61,22 @@
         <p>An complete set of API to control every aspect of the system, easily integrable with your external applications.</p>
       </div>
     </div>
-    <div class='col-md-4'>
+    <div class='col-md-3'>
       <div class='iconed-feature'>
         <div class='feature-icon-w'>
           <i class='icon-signal'></i>
         </div>
         <h4>An health check system</h4>
         <p>Active or passive checks to react and update records according to the events on your systems.</p>
+      </div>
+    </div>
+    <div class='col-md-3'>
+      <div class='iconed-feature'>
+        <div class='feature-icon-w'>
+          <i class='icon-signal'></i>
+        </div>
+        <h4>It's OpenSource</h4>
+        <p>We believe in OpenSource: the source code of our <%=link_to 'core DNS', 'https://github.com/Moydco/AlwaysResolveDNS'%> and our <%=link_to 'API system', 'https://github.com/Moydco/AlwaysResolveAPI' %> are on GitHub.</p>
       </div>
     </div>
   </div>
@@ -336,18 +345,18 @@
         <ul>
           <li>
             <strong>Free</strong>
-            DNS appliance integrable with OpenNebula Sunstone.
+            Core DNS daemon written in Scala for maximum performance. API system written in RoR for easy customization and integration.
           </li>
           <li>
-            <strong>Automatic</strong>
-            creation and configuration of FQDN and reverse DNS resolution, from VM contextualization data.
+            <strong>OpenSource</strong>
+            release, free of use in Apache 2.0 license. Source code hosted on GitHub.
           </li>
         </ul>
         <div class='separator-shadow-top'>
           <%= image_tag 'shadow-separator-narrow-top.png' %>
         </div>
         <div class='button-w'>
-          <a class='btn btn-primary' href='#'>Coming soon</a>
+          <a class='btn btn-primary' href='https://github.com/moydco'>Go to GitHub</a>
         </div>
       </div>
     </div>
@@ -382,7 +391,7 @@
           <%= image_tag 'shadow-separator-narrow-top.png' %>
         </div>
         <div class='button-w'>
-          <%= link_to 'Register', contact_us_statics_path, class: 'btn btn-primary' %>
+          <%= link_to 'Register', 'https://alwaysresolve.com', class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
