@@ -57,7 +57,10 @@ class StaticsController < ApplicationController
   end
 
   def create
-    if params[:user][:opt_in] == '1'
+    if params[:user].nil?
+      flash.now[:error] = 'Sorry, something went wrong: no params found!'
+      render :contact_us
+    elsif params[:user][:opt_in] == '1'
       @user = User.new(user_attributes)
       if @user.save
         SubscribeMailer.new_subscription(@user,params[:user][:message])
@@ -65,8 +68,8 @@ class StaticsController < ApplicationController
         flash[:notice] = @user.first_name.to_s + ', thank you for subscribe'
         redirect_to root_path
       else
-        flash[:error] = 'Sorry, something went wrong: ' + @user.errors.full_messages.to_sentence
-        redirect_to root_path
+        flash.now[:error] = 'Sorry, something went wrong: ' + @user.errors.full_messages.to_sentence
+        render :contact_us
       end
     else
       @user=params[:user]

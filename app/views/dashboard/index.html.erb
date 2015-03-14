@@ -12,7 +12,7 @@
         <strong>Actions</strong>
       </div>
     </div>
-    <% User.where(admin: false).each do |user| %>
+    <% @users.each do |user| %>
       <div class="'row" %>
         <div class="col-md-7">
           <%= user.email %>

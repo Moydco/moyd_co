@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
   def index
     @user = current_user
     if @user.admin
-
+      @users = User.where(admin: false)
     else
       token=TokenStorage.where(oauth_provider: 'quickbooks').first
       if token.nil?
