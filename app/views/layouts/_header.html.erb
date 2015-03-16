@@ -50,35 +50,67 @@
               <% end %>
             <% end %>
 
-            <% if action_name == 'support' %>
-              <li class='current active'>
-                <%= link_to 'App Development', support_statics_path, class: 'current' %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to 'App Development', support_statics_path %>
-              </li>
-            <% end %>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hosting <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if action_name == 'infrastructure' %>
+                  <li class='current active'>
+                    <%= link_to 'Infrastructure', infrastructure_statics_path, class: 'current' %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to 'Infrastructure', infrastructure_statics_path %>
+                  </li>
+                <% end %>
 
-            <% if action_name == 'infrastructure' %>
-              <li class='current active'>
-                <%= link_to 'Infrastructure', infrastructure_statics_path, class: 'current' %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to 'Infrastructure', infrastructure_statics_path %>
-              </li>
-            <% end %>
+                <% if action_name == 'hosting' %>
+                  <li class='current active'>
+                    <%= link_to 'Personal hosting', hosting_statics_path, class: 'current' %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to 'Personal hosting', hosting_statics_path %>
+                  </li>
+                <% end %>
 
-            <% if action_name == 'dns' %>
-              <li class='current active'>
-                <%= link_to 'DNS App', dns_statics_path, class: 'current' %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to 'DNS App', dns_statics_path %>
-              </li>
-            <% end %>
+                <% if action_name == 'reseller' %>
+                  <li class='current active'>
+                    <%= link_to 'Reseller Hosting', reseller_statics_path, class: 'current' %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to 'Reseller Hosting', reseller_statics_path %>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+
+                <% if action_name == 'support' %>
+                  <li class='current active'>
+                    <%= link_to 'App Development', support_statics_path, class: 'current' %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to 'App Development', support_statics_path %>
+                  </li>
+                <% end %>
+
+                <% if action_name == 'dns' %>
+                  <li class='current active'>
+                    <%= link_to 'DNS App', dns_statics_path, class: 'current' %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to 'DNS App', dns_statics_path %>
+                  </li>
+                <% end %>
+
+              </ul>
+            </li>
 
             <% if action_name == 'team' %>
               <li class='current active'>
