@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resources :statics, only: [:create] do
     collection do
+      get :hosting
+      get :reseller
       get :dns
       get :infrastructure
       get :support

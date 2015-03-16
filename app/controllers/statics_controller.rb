@@ -2,6 +2,26 @@ class StaticsController < ApplicationController
   require 'json'
   require 'httparty'
 
+  def hosting
+    set_meta_tags :title => 'Professional Hosting Plan'
+    set_meta_tags :description => 'Take advantage of Moyd.co worldwide server infrastructure to host your internet application in the most secure way. Now, be the Master Of Your Domain!'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, customer, professional, hosting, web, mail'
+    set_meta_tags :og => {
+                      :title => 'Professional Hosting Plan',
+                      :description => 'Take advantage of Moyd.co worldwide server infrastructure to host your internet application in the most secure way. Now, be the Master Of Your Domain!'
+                  }
+  end
+
+  def reseller
+    set_meta_tags :title => 'Reseller packages'
+    set_meta_tags :description => 'If you are a web designer, a web agency or a SEO consultant, you already know the importance of an high speed secure hosting. Now, be the Master Of Your Domain!'
+    set_meta_tags :keywords => 'Moyd, moyd.co, master of your domain, server, reseller, hosting, web, mail'
+    set_meta_tags :og => {
+                      :title => 'Reseller packages',
+                      :description => 'If you are a web designer, a web agency or a SEO consultant, you already know the importance of an high speed secure hosting. Now, be the Master Of Your Domain!'
+                  }
+  end
+
   def infrastructure
     set_meta_tags :title => 'Carrier Grade infrastructure'
     set_meta_tags :description => 'Moyd.co has a worldwide server infrastructure to host your internet application in the most secure way. Now, be the Master Of Your Domain!'

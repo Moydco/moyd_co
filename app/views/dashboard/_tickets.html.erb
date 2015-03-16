@@ -1,0 +1,48 @@
+<div class='tab-pane' id='tickets'>
+  <div class="row">
+    <div class="col-md-2">
+      <strong>Ticket Number</strong>
+    </div>
+    <div class="col-md-4">
+      <strong>Subject</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Created at</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Last update at</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Status</strong>
+    </div>
+  </div>
+  <% @tickets.each do |ticket| %>
+    <div class="row">
+      <div class="col-md-2">
+        <%= ticket.id %>
+      </div>
+      <div class="col-md-4">
+        <%= ticket.subject.truncate(47, separator: ' ') %>
+      </div>
+      <div class="col-md-2">
+        <%= ticket.created_at.strftime('%d-%m-%Y %k:%M:%S') %>
+      </div>
+      <div class="col-md-2">
+        <%= ticket.updated_at.strftime('%d-%m-%Y %k:%M:%S') %>
+      </div>
+      <div class="col-md-2">
+        <%= ticket.status %>
+      </div>
+    </div>
+  <% end %>
+  <h4 class='header-lined less-margin'>How to request our help</h4>
+  <p>
+    The best way to interact with us is to send an email to <a href="mailto: support@moyd.co">support@moyd.co</a> from your email <%=current_user.email%>.
+    If you want to use another email to talk with us, please submit your request via the <%= link_to 'Contact Form', contact_us_statics_path %>.
+  </p>
+  <p>You can also use the chat box below: if we are not online, don't worry: we will be notified immediatly via email.</p>
+  <p>At last if you prefere using the phone, call our helpdesk at +44 (0) 161 850 3720.</p>
+  <p>All your requests will be managed by our <a href="https://moydco.zendesk.com">customer support</a> portal.</p>
+  <p>Before log in for the first time, you have to setup your password clicking on <a href="https://moydco.zendesk.com/access/unauthenticated?return_to=https%3A%2F%2Fmoydco.zendesk.com%2Fhc%2Fen-gb&theme=hc#">Forgot my password</a>.</p>
+  <p>Feel free to login to our customer support portal to view your ticket status.</p>
+</div>
